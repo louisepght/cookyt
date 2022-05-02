@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import {View, Text} from 'react-native';
+import * as data from './assets/user.json';
 
-export default function App() {
+const MyWebtutsComponent = () => {
+  
+  const rawdata = data;
+  console.log(rawdata);
   return (
-    <View style={styles.container}>
-      <Text>Welcome on cookyt trolo</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>{JSON.stringify(rawdata.example)}</Text>
     </View>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};
+export default MyWebtutsComponent;
