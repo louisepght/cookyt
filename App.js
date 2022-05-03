@@ -31,7 +31,8 @@ export default function App() {
         tabBarStyle:{
           backgroundColor : '#000',
           position: 'absolute',
-          height: 75,
+          
+          height: 100,
           borderTopLeftRadius: 15,
           borderTopRightRadius: 15 
 
