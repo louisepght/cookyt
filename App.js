@@ -1,17 +1,23 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 //import { colors, styles } from './app/Styles'
 
 
 //Screens
 import Home from './app/screens/Home';
-import Search from './app/screens/Search';
+import SearchScreen from './app/screens/SearchScreen';
 import LibrairiesScreen from './app/screens/LibrairiesScreen';
-import GroceryList from './app/screens/GroceryList';
+import GroceryListScreen from './app/screens/GroceryListScreen';
+import GroceryListScreenNavigator from './app/components/CustomStackNavigation';
+import GroceryListDetails from './app/screens/GroceryListDetails';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
+import styles from './app/Styles'
 
 //Scree names
 const homeScreen = 'Home';
@@ -20,13 +26,20 @@ const groceryScreen = 'Grocery';
 const librariesScreen = 'Librairies';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
+
+
+
 
 
 export default function App() {
   return (
+
     <NavigationContainer>
+    {/* Définition de la barre de navigation en bas de l'écran */}
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle:{
           backgroundColor : '#000',
@@ -46,7 +59,7 @@ export default function App() {
           </View>
         )
       }}/>
-      <Tab.Screen name="Search" component={Search}  options={{
+      <Tab.Screen name="Search" component={SearchScreen}  options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/search.png')}
@@ -55,7 +68,7 @@ export default function App() {
           </View>
         )
       }}/>
-      <Tab.Screen name="Grocery" component={GroceryList}  options={{
+      <Tab.Screen name="Grocery" component={GroceryListScreenNavigator}  options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/shopping-cart.png')}
@@ -76,65 +89,27 @@ export default function App() {
 
 
     </Tab.Navigator>
-  </NavigationContainer>
-  )
-}
-
-      /*
-    <NavigationContainer>
-      <Tab.Navigator
-      initialRouteName={homeScreen}
-      screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
-          let iconName;
-          let rn = route.name;
-          if(rn === homeScreen){
-            iconName = focused ? 'home' : 'planet'
-            return<Image source={require('./app/assets/home.png')} style = {styles.imagesMenu}/>
-
-          }
-          else if(rn === groceryScreen){
-            iconName = focused ? 'basket' : 'airplane'
-            return<Image source={require('./app/assets/shopping-cart.png')} style = {styles.imagesMenu}/>
-
-          }
-          else if(rn === searchScreen){
-            iconName = focused ? 'searched' : 'medkit'
-            return<Image source={require('./app/assets/home.png')} style = {styles.imagesMenu}/>
-
-          }
-          else if(rn === librariesScreen){
-            iconName = focused ? 'list' : 'list-box'
-            return<Image source={require('./app/assets/home.png')} style = {styles.imagesMenu}/>
-
-          }
-
-          //return<Image source={require('./app/assets/home.png')} style = {styles.imagesMenu}/>
-          //return <Icon name={iconName} size ={size} color={color}/>
-
-        }
-      })}>
-
-        <Tab.Screen name ={homeScreen} component={Home}/>
-        <Tab.Screen name ={groceryScreen} component={GroceryList}/>
-        <Tab.Screen name ={searchScreen} component={Search}/>
-        <Tab.Screen name ={librariesScreen} component={LibrairiesScreen}/>
-
-      </Tab.Navigator>
-   
-
     </NavigationContainer>
-    }
+  )}
+  /*
+  <NavigationContainer>
 
+    {/* Définition de tous les écrans dans lesquels on peut naviguer *}
     
+    <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="GroceryList" component={GroceryListScreen} />
+        <Stack.Screen name="GroceryList details" component={GroceryListDetails} />
+        <Stack.Screen name="Librairies" component={LibrairiesScreen} />
+
+    </Stack.Navigator>
+    
+    </NavigationContainer> */
 
 
 
-
-  );
-}*/
-
-const styles = StyleSheet.create({
+const styles2 = StyleSheet.create({
   container: {
     flex: 1,
     //backgroundColor: '#fff',
