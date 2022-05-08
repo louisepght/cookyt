@@ -10,7 +10,7 @@ console.log(StatusBar.currentHeight)
 
 
 
-export default StyleSheet.create({
+export default styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: colors.get("white"),
@@ -35,7 +35,32 @@ export default StyleSheet.create({
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
       backgroundColor: colors.get("white"),
+    },
+
+    groceryListComponent:{
+      backgroundColor:'#22aa55',
+      width:'80%',
+      padding:20,
+      marginTop:20,
+      //alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 20,
+    },
+    groceryListComponentBottom:{
+      flexDirection:'row',
+      alignItems:'center',
+      flexWrap:'wrap'
+    },
+
+    titleText: {
+      fontSize:30,
+      fontWeight:'bold'
+    },
+    titleContainer:{
+      margin:10,
+      padding:10
     }
   });
-  
+
+
   //export default {styles};

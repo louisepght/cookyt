@@ -10,22 +10,20 @@ export default function GroceryList (props) {
   const name = props.name;
   
     return (
-      <View style={styles2.groceryList} 
-      onStartShouldSetResponder={() => navigation.navigate('GroceryListDetails')}>
-        <Text>Une liste de course nommée {name}</Text>
+      <View style={styles.groceryListComponent} 
+      onStartShouldSetResponder={() => navigation.navigate('GroceryListDetails', {name: name})}>
+        <Text style={localStyles.text}>{name}</Text>
+        <View style={styles.groceryListComponentBottom}>
+
+        </View>
       </View>
     )
   
 }
 
-const styles2 = StyleSheet.create({
-    groceryList:{
-        backgroundColor:'#22aa55',
-        width:'80%',
-        padding:20,
-        //height:85,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 20,
-      }
+const localStyles = StyleSheet.create({
+    text:{
+      fontSize:15,
+    }
+
 })

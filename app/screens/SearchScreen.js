@@ -1,24 +1,25 @@
 import { StyleSheet, Text, View, StatusBar } from 'react-native'
 import React from 'react'
+import styles from "../Styles"
 
 function SearchScreen() {
   console.log("search");
   return (
-    <View  style={styles.search}>
-
-        <Text> Search Screen </Text>
-
+    <View style={styles.androidSafeArea}> 
+      <View style={styles.titleContainer}>
+        <Text style={styles.titleText}>
+          Recherche
+        </Text>
+      </View>
+      <View>
+        <Text>
+          Insert content here
+        </Text>
+      </View>
     </View>
+
   )
 }
 
-const styles = StyleSheet.create({
-    search: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
 
 export default SearchScreen;
