@@ -6,9 +6,11 @@ import styles from '../Styles'
 import Category from '../components/Category';
 import RecipeItemList from '../components/RecipeItemList';
 import { COLORS } from '../values/colors';
+import AstuceduJour from '../components/AstuceduJour';
 //const { height, width } = Dimensions.get('window')
 
 class HomeScreen extends Component{
+
   componentWillMount(){
     this.startheaderHeight = 80
     if(Platform.OS == 'android'){
@@ -68,7 +70,10 @@ class HomeScreen extends Component{
               <Text style = {styles.titleText}>
               Astuces du jour
               </Text>
+              <AstuceduJour backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Comment faire un roux digne de ce nom ?' imageUri={require('../assets/etchebest.jpg')}></AstuceduJour>
+
             </View>
+            <View style={{height:100}}></View>
 
           </ScrollView>
         </View>
