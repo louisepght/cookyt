@@ -14,6 +14,13 @@ function GroceryListScreen(props) {
         </Text>
       </View>
 
+      <KeyboardAvoidingView 
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={localStyles.writeAList}>
+        <TextInput style={localStyles.input} placeholder={"Créer une nouvelle liste"}/>
+
+      </KeyboardAvoidingView>
+      <TextInput style={localStyles.input} placeholder={"Créer une nouvelle liste"}/>
 
 
       {/* Liste des listes de courses */}
@@ -36,7 +43,6 @@ function GroceryListScreen(props) {
         <TextInput style={localStyles.input} placeholder={"Créer une nouvelle liste"}/>
 
       </KeyboardAvoidingView>*/}
-
 
 
     </View>

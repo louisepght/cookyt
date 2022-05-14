@@ -35,6 +35,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
 
+    
     <NavigationContainer>
     {/* Définition de la barre de navigation en bas de l'écran */}
     <Tab.Navigator
@@ -44,8 +45,7 @@ export default function App() {
         tabBarStyle:{
           backgroundColor : '#000',
           position: 'absolute',
-          
-          height: 100,
+          height: 75,
           borderTopLeftRadius: 15,
           borderTopRightRadius: 15 
 
@@ -91,6 +91,7 @@ export default function App() {
 
     </Tab.Navigator>
     </NavigationContainer>
+    
   )}
   /*
   <NavigationContainer>
