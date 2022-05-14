@@ -16,12 +16,12 @@ class LibrairiesScreen extends Component{
 
   render(){
     return(
-      <SafeAreaView  style={localstyles.homeScreen}>
+      <SafeAreaView  style={styles.androidSafeArea}>
         <View style={{flexDirection:'column'}}>
           <ScrollView
           scrollEventThrottle={16}
           >
-            <View style={{flex:1}}>
+            <View style={styles.titleContainer}>
               <Text style = {styles.titleText}>
                 Vos Bibliothèques
               </Text>

@@ -1,4 +1,5 @@
 import { StyleSheet, Platform, StatusBar} from 'react-native';
+import { COLORS } from './values/colors';
 
 
 const colors = new Map();
@@ -36,7 +37,9 @@ export default styles = StyleSheet.create({
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
       backgroundColor: colors.get("white"),
-      paddingBottom:75,
+      //paddingBottom:75,
+      backgroundColor:COLORS.pageBackgroundGray
+
     },
 
     groceryListComponent:{
@@ -60,13 +63,13 @@ export default styles = StyleSheet.create({
       margin: 20,
     },
     titleContainer:{
-      margin:10,
+      //margin:10,
       padding:10
     },
     GroceryListScreenContainer: {
-      backgroundColor: '#fe1',
-      alignItems:"center",
-      paddingBottom:75,
+     // backgroundColor: '#fe1',
+      //alignItems:"center",
+      //paddingBottom:75,
     },
     addAListContainer:{
       backgroundColor: colors.get("vividGreen"),

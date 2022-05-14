@@ -29,6 +29,8 @@ function GroceryListScreen(props) {
 
   return (
     <View style={[styles.androidSafeArea, {paddingBottom:0}]}> 
+    <ScrollView contentContainerStyle ={[styles.GroceryListScreenContainer]}>
+
       <View style={styles.titleContainer}>
         <Text style={styles.titleText}>
           Vos listes de courses
@@ -50,11 +52,8 @@ function GroceryListScreen(props) {
         </TouchableOpacity>
 
       </KeyboardAvoidingView>
-
+      <View style={localStyles.container}>
       {/* Liste des listes de courses */}
-      <ScrollView contentContainerStyle ={[styles.GroceryListScreenContainer]}>
-        <GroceryList navigation={props.navigation} name="MaListe" />
-        <GroceryList navigation={props.navigation} name="MaListe" />
         <GroceryList navigation={props.navigation} name="MaListe" />
         <GroceryList navigation={props.navigation} name="MaListe" />
         <GroceryList navigation={props.navigation} name="MaListe" />
@@ -65,9 +64,10 @@ function GroceryListScreen(props) {
         {glistItems.map( (item, index) => {
            return <GroceryList navigation={props.navigation} name={item} color={getAColor(index)} key={index}/>
         })}
+      </View>
 
+    </ScrollView>
 
-      </ScrollView>
 
 
 
@@ -87,7 +87,6 @@ function GroceryListScreen(props) {
 const localStyles = StyleSheet.create({
     container: {
       //flex: 1,
-      backgroundColor: '#f71',
       alignItems:"center",
       paddingBottom:75,
     },
