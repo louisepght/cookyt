@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-
 //import { colors, styles } from './app/Styles'
 
 
@@ -42,12 +41,14 @@ export default function App() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true,
         tabBarStyle:{
           backgroundColor : '#000',
           position: 'absolute',
           height: 75,
           borderTopLeftRadius: 15,
-          borderTopRightRadius: 15 
+          borderTopRightRadius: 15,
+          flex:1,
 
         }
       }}>

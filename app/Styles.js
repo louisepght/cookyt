@@ -35,10 +35,11 @@ export default styles = StyleSheet.create({
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
       backgroundColor: colors.get("white"),
+      paddingBottom:75,
     },
 
     groceryListComponent:{
-      backgroundColor:'#22aa55',
+      backgroundColor:colors.get("vividGreen"),
       width:'80%',
       padding:20,
       marginTop:20,
@@ -59,7 +60,20 @@ export default styles = StyleSheet.create({
     titleContainer:{
       margin:10,
       padding:10
-    }
+    },
+    GroceryListScreenContainer: {
+      backgroundColor: '#fe1',
+      alignItems:"center",
+      paddingBottom:75,
+    },
+    addAListContainer:{
+      backgroundColor: colors.get("vividGreen"),
+      borderRadius:15,
+      width:30,
+      height:30,
+      justifyContent:'center',
+      alignItems:'center'
+    },
   });
 
 
