@@ -63,7 +63,6 @@ export default styles = StyleSheet.create({
       margin:10,
       padding:10
     },
-<<<<<<< HEAD
     GroceryListScreenContainer: {
       backgroundColor: '#fe1',
       alignItems:"center",
@@ -77,7 +76,6 @@ export default styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center'
     },
-=======
     h2:{
       fontSize:20,
       fontWeight:'500',
@@ -85,7 +83,6 @@ export default styles = StyleSheet.create({
     }
   
 
->>>>>>> master
   });
 
 

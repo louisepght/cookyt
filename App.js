@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 //import { colors, styles } from './app/Styles'
 
 
@@ -34,7 +35,6 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
 
-    
     <NavigationContainer>
     {/* Définition de la barre de navigation en bas de l'écran */}
     <Tab.Navigator
@@ -45,10 +45,10 @@ export default function App() {
         tabBarStyle:{
           backgroundColor : '#000',
           position: 'absolute',
+          
           height: 75,
           borderTopLeftRadius: 15,
-          borderTopRightRadius: 15,
-          flex:1,
+          borderTopRightRadius: 15 
 
         }
       }}>
@@ -92,7 +92,6 @@ export default function App() {
 
     </Tab.Navigator>
     </NavigationContainer>
-    
   )}
   /*
   <NavigationContainer>
