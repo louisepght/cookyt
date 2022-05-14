@@ -11,6 +11,7 @@ console.log(StatusBar.currentHeight)
 
 
 export default styles = StyleSheet.create({
+
     container: {
       flex: 1,
       backgroundColor: colors.get("white"),
@@ -55,12 +56,14 @@ export default styles = StyleSheet.create({
 
     titleText: {
       fontSize:30,
-      fontWeight:'bold'
+      fontWeight:'bold',
+      margin: 20,
     },
     titleContainer:{
       margin:10,
       padding:10
     },
+<<<<<<< HEAD
     GroceryListScreenContainer: {
       backgroundColor: '#fe1',
       alignItems:"center",
@@ -74,6 +77,15 @@ export default styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center'
     },
+=======
+    h2:{
+      fontSize:20,
+      fontWeight:'500',
+   
+    }
+  
+
+>>>>>>> master
   });
 
 
