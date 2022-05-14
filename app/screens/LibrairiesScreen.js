@@ -7,6 +7,7 @@ import { COLORS } from '../values/colors';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import recipelibraries from '../lists/recipelibraries';
 import ListComponent from '../components/ListComponent';
+import SearchBar from '../components/SearchBar';
 
 
 class LibrairiesScreen extends Component{
@@ -32,6 +33,9 @@ class LibrairiesScreen extends Component{
                 Search bar
               </Text>
 
+              <SearchBar></SearchBar>
+              
+
             
             </View>
 
@@ -49,12 +53,7 @@ class LibrairiesScreen extends Component{
                 keyExtractor={item => item.libraryname}
                 renderItem={({item}) => (
                   <ListComponent backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
-                )}
-
-                
-                
-                >
-
+                )}>
               </FlatList>
              
             </View>
