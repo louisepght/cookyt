@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View, StatusBar } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView } from 'react-native'
 import React from 'react'
 import MenuBar from './MenuBar';
 
 function GroceryList() {
   console.log("grocery");
   return (
-    <View  style={{
+    <SafeAreaView  style={{
         flex:1,
         backgroundColor: '#f71',
         alignItems: 'center',
@@ -18,7 +18,7 @@ function GroceryList() {
       
         <MenuBar/>
 
-    </View>
+    </SafeAreaView>
   )
 }
 
