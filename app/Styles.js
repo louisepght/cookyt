@@ -62,6 +62,11 @@ export default styles = StyleSheet.create({
       margin:10,
       padding:10
     },
+    h2:{
+      fontSize:20,
+      fontWeight:'500',
+   
+    }
   
 
   });

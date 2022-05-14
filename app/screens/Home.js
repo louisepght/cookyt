@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image, Dimensions, FlatList } from 'react-native'
 import { Component } from "react"
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler';
@@ -7,6 +7,7 @@ import Category from '../components/Category';
 import RecipeItemList from '../components/RecipeItemList';
 import { COLORS } from '../values/colors';
 import AstuceduJour from '../components/AstuceduJour';
+import recipelibraries from '../lists/recipelibraries';
 //const { height, width } = Dimensions.get('window')
 
 class HomeScreen extends Component{
@@ -38,7 +39,7 @@ class HomeScreen extends Component{
                 
               </View>
               <View style={{flexDirection:'column'}}>
-              <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Recettes faciles' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
+                <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Recettes faciles' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Pâtisserie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Epater la galerie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Coloc' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
@@ -91,7 +92,6 @@ const localstyles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor:COLORS.pageBackgroundGray,
     },
-
   });
 
 export default HomeScreen;
