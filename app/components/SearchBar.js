@@ -13,6 +13,8 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
           clicked
             ? styles.searchBar__clicked
             : styles.searchBar__unclicked
+
+            
         }
       >
         {/* search Icon */}
