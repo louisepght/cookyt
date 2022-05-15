@@ -79,6 +79,32 @@ export default styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center'
     },
+
+    writeSomethingViewContainer:{
+      marginLeft:15,
+      marginRight:15,
+      marginBottom:15,
+      justifyContent: "space-around",
+      flexDirection:'row',
+      alignItems:'center',
+
+    },
+    writeSomethingTextView: {
+      padding:10,
+      width:'70%',
+      borderColor:'#555',
+      borderWidth:0.2,
+      borderRadius:25,
+      backgroundColor:"#FFF"
+    },
+    inputTextKeyboard:{
+
+    },
+    imageButonAdd:{
+      width:20,
+      height:20,
+      tintColor: '#fff',
+    },
     h2:{
       fontSize:20,
       fontWeight:'500',

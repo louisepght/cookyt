@@ -41,15 +41,15 @@ function GroceryListScreen(props) {
       
       <KeyboardAvoidingView 
             behavior={Platform.OS === "ios" ? "padding" : "height"}
-            style={[localStyles.writeAListContainer]}>
-        <View style={localStyles.writeAList}>
-          <TextInput style={localStyles.input} placeholder={"Créer une nouvelle liste"} 
+            style={[styles.writeSomethingViewContainer]}>
+        <View style={styles.writeSomethingTextView}>
+          <TextInput style={styles.input} placeholder={"Créer une nouvelle liste"} 
             value={glist} onChangeText={text => setGlist(text)}/>
         </View>
         <TouchableOpacity style={styles.addAListContainer} onPress={() => handleAddGlist()}>
         <Image source={require('../assets/add2.png')}
             resizeMode='contain'
-            style={[localStyles.imagesAdd]}/>
+            style={[styles.imageButonAdd]}/>
         </TouchableOpacity>
 
       </KeyboardAvoidingView>
@@ -91,45 +91,7 @@ const localStyles = StyleSheet.create({
       alignItems:"center",
       paddingBottom:75,
     },
-    writeAListContainer:{
-      marginLeft:15,
-      marginRight:15,
-      marginBottom:15,
-      justifyContent: "space-around",
-      flexDirection:'row',
-      alignItems:'center',
 
-    },
-    writeAList: {
-      padding:10,
-      width:'70%',
-      borderColor:'#555',
-      borderWidth:0.2,
-      borderRadius:25,
-      backgroundColor:"#FFF"
-    },
-    input:{
-
-    },
-    addButtonText: {
-      color:'#fff',
-      fontSize:28,
-      backgroundColor: 'transparent'
-
-    },
-    addAListContainer:{
-      backgroundColor:'#2a2',
-      borderRadius:15,
-      width:30,
-      height:30,
-      justifyContent:'center',
-      alignItems:'center'
-    },
-    imagesAdd:{
-      width:20,
-      height:20,
-      tintColor: '#fff',
-    }
   });
 
 export default GroceryListScreen;
