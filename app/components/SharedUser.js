@@ -1,6 +1,5 @@
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
-import GroceryListDetails from '../screens/GroceryListDetails'
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../Styles';

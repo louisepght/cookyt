@@ -17,6 +17,10 @@ class GroceryListModel{
     addContributor(c){
         this.contributors.push(c);
     }
+
+    toString(){
+        return this.name;
+    }
 }
 
 export default GroceryListModel;

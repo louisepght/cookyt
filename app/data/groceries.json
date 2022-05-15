@@ -1,8 +1,30 @@
-{	[
+[
 	{
 		"name":"MaListe",
 		"contributors":["Céline", "Michel"],
-		"file":"../data/groceryLists/MaListe.json"
+		"items":[
+			{"name":"Farine", "quantity":"500g"},
+			{"name":"Beurre", "quantity":"200g"},
+			{"name":"Jambon", "quantity":"2 tranches"}
+		]
+	},
+	{
+		"name":"MaListe2",
+		"contributors":["Marcel", "Michel Fouligaud", "Florent Picard"],
+		"items":[
+			{"name":"Farine", "quantity":"500g"},
+			{"name":"Beurre", "quantity":"200g"},
+			{"name":"Jambon", "quantity":"2 tranches"}
+		]
+	},
+	{
+		"name":"MaListe3",
+		"contributors":["Céline", "Michel"],
+		"items":[
+			{"name":"Farine", "quantity":"500g"},
+			{"name":"Beurre", "quantity":"200g"},
+			{"name":"Jambon", "quantity":"2 tranches"}
+		]
 	}
-	]
- }
+]
+ 
