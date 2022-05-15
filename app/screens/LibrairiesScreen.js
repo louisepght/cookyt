@@ -49,12 +49,14 @@ class LibrairiesScreen extends Component{
 
             <View>
               <FlatList
+                scrollEnabled={false}
                 data={recipelibraries}
                 keyExtractor={item => item.libraryname}
                 renderItem={({item}) => (
                   <ListComponent backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 )}>
               </FlatList>
+            
              
             </View>
 

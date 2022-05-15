@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import GroceryList from '../components/GroceryList';
 import styles from '../Styles'
 import { ScrollView } from 'react-native-gesture-handler';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 function GroceryListScreen(props) {
 
@@ -96,7 +97,7 @@ const localStyles = StyleSheet.create({
       marginBottom:15,
       justifyContent: "space-around",
       flexDirection:'row',
-      alignItems:'center'
+      alignItems:'center',
 
     },
     writeAList: {
@@ -104,7 +105,8 @@ const localStyles = StyleSheet.create({
       width:'70%',
       borderColor:'#555',
       borderWidth:0.2,
-      borderRadius:25
+      borderRadius:25,
+      backgroundColor:"#FFF"
     },
     input:{
 
