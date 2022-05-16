@@ -4,18 +4,19 @@ import PropTypes from 'prop-types'
 import styles from '../Styles'
 import ReturnScreenButton from '../components/ReturnScreenButton'
 import SharedUser from '../components/SharedUser'
+import GroceryItem from '../components/GroceryItem';
 
 import * as data from '../data/groceryLists/MaListe.json';
 import { ScrollView } from 'react-native-gesture-handler'
 
 function GroceryListDetails({route, navigation}) {
-  let {name} = route.params;
+  let {liste} = route.params;
   const parsedData =  JSON.parse(JSON.stringify(data)); //makes a clean copy of data
 
   let [plist, setPlist] = useState(); //utilisé pour le produit à ajouter
   let [plistItems, setPlistItems] = useState([]); //utilisé pour tous les produits de la liste
 
-  let handleAddPlist = () => {
+  let handleAddPlist = () => { //Pour l'ajout d'un produit dans la liste des produits
     if(plist && plist.length>0){
       setPlistItems([...plistItems,  plist]);
       setPlist(null);
@@ -23,7 +24,9 @@ function GroceryListDetails({route, navigation}) {
     }
   }
   
-  let contribs = parsedData.contributors;
+  //let contribs = parsedData.contributors;
+
+//  console.log(liste);
 
   return (
     <View style={ [styles.androidSafeArea, localStyles.mainContainer]}>
@@ -33,7 +36,7 @@ function GroceryListDetails({route, navigation}) {
         <ScrollView>
           <View style={localStyles.titleContainer}>
             <Text style={localStyles.titleText}>
-              {name}
+              {liste.name}
             </Text>
           </View>
 
@@ -51,10 +54,15 @@ function GroceryListDetails({route, navigation}) {
               <SharedUser navigation={navigation} name="Alphonse Delaroche" />
               <SharedUser navigation={navigation} name="Alphonse Delarocheau" />
               
-              {contribs.map( (item, index) => {
-                return <SharedUser navigation={navigation} name={item} key={index}/>
+              {/* Si on veut utiliser un fichier json par liste}
+              {contribs.map( (it, index) => {
+                return <SharedUser navigation={navigation} name={it} key={index}/>
               })}
-
+              */}
+              
+              {liste.contributors.map( (it, index) => {
+                return <SharedUser navigation={navigation} name={it} key={index}/>
+              })}
             </View>
           </View> 
 
@@ -75,6 +83,20 @@ function GroceryListDetails({route, navigation}) {
                 style={[styles.imageButonAdd]}/>
             </TouchableOpacity>
           </KeyboardAvoidingView>
+
+
+          <View style={localStyles.itemsContainer}>            
+          <GroceryItem  name="salut" key="4"/>                
+              {liste.items.map( (it, index) => {
+                //console.log(it);
+                
+                return <GroceryItem  name={it.name} key={index}/>
+              })}
+            
+
+          </View> 
+
+
 
         </ScrollView>
       </View>
@@ -102,7 +124,10 @@ const localStyles = StyleSheet.create({
     flex:1,
     flexWrap:'wrap',
     alignItems:'center',
-
+  },
+  itemsContainer:{
+    alignItems:'center',
+    marginVertical:8
   }
 })
 export default GroceryListDetails

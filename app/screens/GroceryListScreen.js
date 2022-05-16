@@ -5,10 +5,13 @@ import styles from '../Styles'
 import { ScrollView } from 'react-native-gesture-handler';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import GroceryListModel from '../models/GroceryListModel'
-import { render } from 'react-dom';
+//import { render } from 'react-dom';
+
+//import {writeJsonFile} from 'write-json-file';
+//import AsyncStorage from '@react-native-async-storage/async-storage';
+
 //import * as data from '../data/groceries.json';
 const data = require('../data/groceries.json');
-
 
 
 
@@ -27,6 +30,12 @@ class GroceryListScreen extends React.Component{
       var obj = data[i];
       if(obj.hasOwnProperty('name') && obj.name.length>0){
         let liste = new GroceryListModel(obj.name);
+        if(obj.hasOwnProperty('contributors')){
+          liste.setContributors(obj.contributors);
+        }
+        if(obj.hasOwnProperty('items')){
+          liste.setItems(obj.items);
+        }
         this.glistItems.push(liste);
       }
     }
@@ -40,6 +49,9 @@ class GroceryListScreen extends React.Component{
       this.setState({text:''});
       Keyboard.dismiss();
       this.textInput.clear();
+      //il faut aussi ajouter la nouvelle liste au json
+      data.push(liste);
+      //await writeJsonFile('../data/groceries.json', data);    
     }
   }
 
@@ -83,7 +95,7 @@ class GroceryListScreen extends React.Component{
         <View style={localStyles.container}>
         {/* Liste des listes de courses */}        
           {this.glistItems.map( (item, index) => {
-            return <GroceryList navigation={this.props.navigation} name={item.getName()} color={this.getAColor(index)} key={index}/>
+            return <GroceryList navigation={this.props.navigation} liste={item} color={this.getAColor(index)} key={index}/>
           })}
         </View>
 

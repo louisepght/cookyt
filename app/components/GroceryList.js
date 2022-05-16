@@ -1,13 +1,13 @@
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
-import GroceryListDetails from '../screens/GroceryListDetails'
+//import GroceryListDetails from '../screens/GroceryListDetails'
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../Styles';
 
 export default function GroceryList (props) {
   const  navigation  = props.navigation;
-  const name = props.name;
+  const liste = props.liste;
   const color = props.color;
   
   let getMyColor = (color) =>{
@@ -19,8 +19,8 @@ export default function GroceryList (props) {
 
     return (
       <TouchableOpacity style={[styles.groceryListComponent, {backgroundColor:getMyColor(color)}]} 
-      onPress={() => navigation.navigate('GroceryListDetails', {name: name})}>
-        <Text style={localStyles.text}>{name}</Text>
+      onPress={() => navigation.navigate('GroceryListDetails', {liste: liste})}>
+        <Text style={localStyles.text}>{liste.name}</Text>
         <View style={[styles.groceryListComponentBottom]}>
 
         </View>
