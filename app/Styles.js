@@ -1,5 +1,4 @@
 import { StyleSheet, Platform, StatusBar} from 'react-native';
-import { COLORS } from './values/colors';
 
 
 const colors = new Map();
@@ -37,13 +36,10 @@ export default styles = StyleSheet.create({
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
       backgroundColor: colors.get("white"),
-      //paddingBottom:75,
-      backgroundColor:COLORS.pageBackgroundGray
-
     },
 
     groceryListComponent:{
-      backgroundColor:colors.get("vividGreen"),
+      backgroundColor:'#22aa55',
       width:'80%',
       padding:20,
       marginTop:20,
@@ -63,47 +59,8 @@ export default styles = StyleSheet.create({
       margin: 20,
     },
     titleContainer:{
-      //margin:10,
+      margin:10,
       padding:10
-    },
-    GroceryListScreenContainer: {
-     // backgroundColor: '#fe1',
-      //alignItems:"center",
-      //paddingBottom:75,
-    },
-    addAListContainer:{
-      backgroundColor: colors.get("vividGreen"),
-      borderRadius:15,
-      width:30,
-      height:30,
-      justifyContent:'center',
-      alignItems:'center'
-    },
-
-    writeSomethingViewContainer:{
-      marginLeft:15,
-      marginRight:15,
-      marginBottom:15,
-      justifyContent: "space-around",
-      flexDirection:'row',
-      alignItems:'center',
-
-    },
-    writeSomethingTextView: {
-      padding:10,
-      width:'70%',
-      borderColor:'#555',
-      borderWidth:0.2,
-      borderRadius:25,
-      backgroundColor:"#FFF"
-    },
-    inputTextKeyboard:{
-
-    },
-    imageButonAdd:{
-      width:20,
-      height:20,
-      tintColor: '#fff',
     },
     h2:{
       fontSize:20,

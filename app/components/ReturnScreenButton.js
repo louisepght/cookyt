@@ -7,7 +7,7 @@ const { navigation } = props;
   return (
     <TouchableOpacity style={localStyles.container}
     onPress={() => navigation.pop()}>
-      <Image source={require('../assets/left-arrow.png')}
+      <Image source={require('../assets/angle-small-down.png')}
             resizeMode='contain'
             style={[localStyles.imageBack]}/>
     </TouchableOpacity>

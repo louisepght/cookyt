@@ -1,9 +1,0 @@
-{
-	"name":"MaListeQui a un nom quand même tres tres long",
-	"contributors":["Céline", "Michel"],
-	"items":[
-	{"name":"Farine", "quantity":"500g"},
-	{"name":"Beurre", "quantity":"200g"},
-	{"name":"Jambon", "quantity":"2 tranches"}
-	]
-}
