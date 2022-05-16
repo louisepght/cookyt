@@ -16,12 +16,12 @@ class LibrairiesScreen extends Component{
 
   render(){
     return(
-      <SafeAreaView  style={styles.androidSafeArea}>
+      <SafeAreaView  style={localstyles.homeScreen}>
         <View style={{flexDirection:'column'}}>
           <ScrollView
           scrollEventThrottle={16}
           >
-            <View style={styles.titleContainer}>
+            <View style={{flex:1}}>
               <Text style = {styles.titleText}>
                 Vos Bibliothèques
               </Text>
@@ -49,14 +49,12 @@ class LibrairiesScreen extends Component{
 
             <View>
               <FlatList
-                scrollEnabled={false}
                 data={recipelibraries}
                 keyExtractor={item => item.libraryname}
                 renderItem={({item}) => (
                   <ListComponent backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 )}>
               </FlatList>
-            
              
             </View>
 
