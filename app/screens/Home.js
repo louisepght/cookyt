@@ -20,15 +20,17 @@ class HomeScreen extends Component{
   }
   render(){
     return(
-      <SafeAreaView  style={localstyles.homeScreen}>
+      <SafeAreaView  style={styles.androidSafeArea}>
         <View style={{flexDirection:'column'}}>
           <ScrollView
           scrollEventThrottle={16}
           >
             <View style={{flex:1}}>
-              <Text style = {styles.titleText}>
-                Prêt?
-              </Text>
+              <View style={styles.titleContainer}>
+                <Text style = {styles.titleText}>
+                  Prêt?
+                </Text>
+              </View>
               <View style={{flexDirection:'row', marginStart:20,marginEnd:20}}>
 
               <View style={{flexDirection:'column'}}>
@@ -49,9 +51,11 @@ class HomeScreen extends Component{
 
 
             <View style={{flex:1}}>
-              <Text style = {styles.titleText}>
-                Recommandations
-              </Text>
+              <View style={styles.titleContainer}>
+                <Text style = {styles.titleText}>
+                  Recommandations
+                </Text>
+              </View>
 
               
               <View style={{flex:1}}>
@@ -68,9 +72,11 @@ class HomeScreen extends Component{
               </View>
             </View>
             <View>
-              <Text style = {styles.titleText}>
-              Astuces du jour
-              </Text>
+              <View style={styles.titleContainer}>
+                <Text style = {styles.titleText}>
+                Astuces du jour
+                </Text>
+              </View>
               <AstuceduJour backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Comment faire un roux digne de ce nom ?' imageUri={require('../assets/etchebest.jpg')}></AstuceduJour>
 
             </View>
