@@ -41,11 +41,12 @@ export default function App() {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
+        tabBarHideOnKeyboard: true,
         tabBarStyle:{
           backgroundColor : '#000',
           position: 'absolute',
           
-          height: 100,
+          height: 75,
           borderTopLeftRadius: 15,
           borderTopRightRadius: 15 
 
