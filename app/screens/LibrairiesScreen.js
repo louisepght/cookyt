@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, FlatList } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, FlatList, Image } from 'react-native'
 import React from 'react'
 import styles from '../Styles'
 import { ScrollView } from 'react-native-gesture-handler';
@@ -8,10 +8,19 @@ import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNat
 import recipelibraries from '../lists/recipelibraries';
 import ListComponent from '../components/ListComponent';
 import SearchBar from '../components/SearchBar';
+import NavBar from '../components/NavBar';
 
 
 class LibrairiesScreen extends Component{
-  componentWillMount(){
+
+  constructor( props) {
+    super(props);
+    this.state = {text: ''}
+    this.glistItems=[];
+  }
+
+
+  componentDidMount(){
   }
 
   render(){
@@ -29,9 +38,7 @@ class LibrairiesScreen extends Component{
 
 
             <View style={{flex:1}}>
-              <Text style = {styles.titleText}>
-                Search bar
-              </Text>
+
 
               <SearchBar></SearchBar>
               
@@ -40,12 +47,7 @@ class LibrairiesScreen extends Component{
             </View>
 
 
-            <View>
-              <Text style = {styles.titleText}>
-              menu nav bar
-              </Text>
-             
-            </View>
+           
 
             <View>
               <FlatList
@@ -53,7 +55,7 @@ class LibrairiesScreen extends Component{
                 data={recipelibraries}
                 keyExtractor={item => item.libraryname}
                 renderItem={({item}) => (
-                  <ListComponent backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
+                  <ListComponent navigation={this.props.navigation} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 )}>
               </FlatList>
             
