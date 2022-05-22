@@ -3,27 +3,27 @@
 		"name":"MaListe",
 		"contributors":["Céline", "Michel"],
 		"items":[
-			{"name":"Farine", "quantity":"500g"},
-			{"name":"Beurre", "quantity":"200g"},
-			{"name":"Jambon", "quantity":"2 tranches"}
+			{"name":"Farine", "quantityIntial":500, "quantityLeft":500, "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Beurre", "quantityIntial":200, "quantityLeft":200, "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Jambon", "quantityIntial":2, "quantityLeft":2, "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
 		]
 	},
 	{
 		"name":"MaListe2",
 		"contributors":["Marcel", "Michel Fouligaud", "Florent Picard"],
 		"items":[
-			{"name":"Farine", "quantity":"500g"},
-			{"name":"Beurre", "quantity":"200g"},
-			{"name":"Jambon", "quantity":"2 tranches"}
+			{"name":"Farine", "quantityIntial":"500", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Beurre", "quantityIntial":"200", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Jambon", "quantityIntial":"2", "quantityLeft":"500", "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
 		]
 	},
 	{
 		"name":"MaListe3",
 		"contributors":["Marion", "Jordan"],
 		"items":[
-			{"name":"Farine", "quantity":"500g"},
-			{"name":"Beurre", "quantity":"200g"},
-			{"name":"Jambon", "quantity":"2 tranches"}
+			{"name":"Farine", "quantityIntial":"500", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Beurre", "quantityIntial":"200", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Jambon", "quantityIntial":"2", "quantityLeft":"500", "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
 		]
 	}
 ]

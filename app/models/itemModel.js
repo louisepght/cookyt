@@ -1,6 +1,6 @@
 //Pour les produits des listes de courses
 
-class itemModel{
+class ItemModel{
     name="";
     quantity=0;
     bought=false;
@@ -11,4 +11,4 @@ class itemModel{
     }
 }
 
-export default itemModel;
+export default ItemModel;

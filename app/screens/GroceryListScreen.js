@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput, Platform, KeyboardAvoidingView, Touc
 import React, {useState, Component}  from 'react';
 import GroceryList from '../components/GroceryList';
 import styles from '../Styles'
+import { menuBarHeight } from '../values/constantes';
 import { ScrollView } from 'react-native-gesture-handler';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import GroceryListModel from '../models/GroceryListModel'
@@ -109,7 +110,7 @@ const localStyles = StyleSheet.create({
     container: {
       //flex: 1,
       alignItems:"center",
-      paddingBottom:75,
+      paddingBottom:menuBarHeight,
     },
 
   });
