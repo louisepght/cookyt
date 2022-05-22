@@ -91,7 +91,9 @@ class GroceryListScreen extends React.Component{
               resizeMode='contain'
               style={[styles.imageButonAdd]}/>
           </TouchableOpacity>
+          
         </KeyboardAvoidingView>
+        
 
         <View style={localStyles.container}>
         {/* Liste des listes de courses */}        

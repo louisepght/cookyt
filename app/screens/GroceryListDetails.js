@@ -101,7 +101,7 @@ class GroceryListDetails extends React.Component{
 
             <KeyboardAvoidingView 
               behavior={Platform.OS === "ios" ? "padding" : "height"}
-              style={[styles.writeSomethingViewContainer, {paddingTop:20, justifyContent:'space-between'}]}>
+              style={[styles.writeSomethingViewContainer, {marginTop:25}]}>
               <View style={styles.writeSomethingTextView}>
                 <TextInput style={styles.input} placeholder={"Ajouter un produit"} 
                   ref={input => { this.textInput = input }}
