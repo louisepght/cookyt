@@ -7,7 +7,7 @@ import styles from '../Styles';
 
 export default function GroceryList (props) {
   const  navigation  = props.navigation;
-  const liste = props.liste;
+  let liste = props.liste;
   const color = props.color;
   
   let getMyColor = (color) =>{

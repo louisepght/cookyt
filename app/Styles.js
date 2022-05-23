@@ -33,10 +33,11 @@ export default styles = StyleSheet.create({
       justifyContent: 'center',
       borderRadius: 20,
     },
+
     androidSafeArea: {
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
-      backgroundColor: colors.get("white"),
+      //backgroundColor: colors.get("white"),
       //paddingBottom:75,
       backgroundColor:COLORS.pageBackgroundGray
 
@@ -71,31 +72,45 @@ export default styles = StyleSheet.create({
       //alignItems:"center",
       //paddingBottom:75,
     },
+
     addAListContainer:{
       backgroundColor: colors.get("vividGreen"),
       borderRadius:15,
       width:30,
       height:30,
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
     },
 
     writeSomethingViewContainer:{
       marginLeft:15,
       marginRight:15,
       marginBottom:15,
+      paddingRight:15,
       justifyContent: "space-around",
       flexDirection:'row',
       alignItems:'center',
+      backgroundColor:COLORS.white,
+      flex:1,
+      
+      borderColor:COLORS.grey,
+      borderWidth:0.5,
+      borderTopLeftRadius:12,
+      borderTopRightRadius:12,
+      borderBottomLeftRadius:18,
+      borderBottomRightRadius:12,
+      overflow: 'hidden',
+      elevation:5
 
     },
     writeSomethingTextView: {
       padding:10,
-      width:'70%',
-      borderColor:'#555',
-      borderWidth:0.2,
+      //width:'70%',
+      //borderColor:'#555',
+      //borderWidth:0.2,
       borderRadius:25,
-      backgroundColor:"#FFF"
+      //backgroundColor:"#FFF",
+      flex:4
     },
     inputTextKeyboard:{
 

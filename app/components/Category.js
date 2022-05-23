@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image, TouchableOpacity } from 'react-native'
 import { Component } from "react"
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler';
@@ -6,9 +6,14 @@ import styles from '../Styles'
 
 
 class Category extends Component{
+    constructor(props){
+      super(props);
+    }
+
     render(){
         return(
-            <View style={{flex:1, marginLeft:10, marginEnd:10}}>
+            <TouchableOpacity style={{flex:1, marginLeft:10, marginEnd:10}}
+            onPress={() => {console.log("Navigue"); this.props.navigation.navigate('Recipe')}}>
                                         <View style={{height:130, width: 130, backgroundColor:this.props.color, borderRadius:20}}>
                                               <View style={{flex:2}}>
                                                 <Image source={this.props.imageUri} style={{flex: 1, height:null,width:null, marginTop:10, marginLeft:20, marginRight:20,marginBottom:0, borderRadius:20}}></Image>
@@ -19,7 +24,7 @@ class Category extends Component{
                                                 </View>
                                               </ScrollView>
                                         </View>
-                                  </View>
+                </TouchableOpacity>
         )
     }
 }

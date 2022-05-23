@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, TextInput, Platform, KeyboardAvoidingView, Touc
 import React, {useState, Component}  from 'react';
 import GroceryList from '../components/GroceryList';
 import styles from '../Styles'
+import { menuBarHeight } from '../values/constantes';
 import { ScrollView } from 'react-native-gesture-handler';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import GroceryListModel from '../models/GroceryListModel'
@@ -79,7 +80,7 @@ class GroceryListScreen extends React.Component{
         
         <KeyboardAvoidingView 
               behavior={Platform.OS === "ios" ? "padding" : "height"}
-              style={[styles.writeSomethingViewContainer]}>
+              style={[styles.writeSomethingViewContainer, {marginRight:25, marginLeft:25}]}>
           <View style={styles.writeSomethingTextView}>
             <TextInput style={styles.input} placeholder={"Créer une nouvelle liste"} 
               ref={input => { this.textInput = input }}
@@ -90,7 +91,9 @@ class GroceryListScreen extends React.Component{
               resizeMode='contain'
               style={[styles.imageButonAdd]}/>
           </TouchableOpacity>
+          
         </KeyboardAvoidingView>
+        
 
         <View style={localStyles.container}>
         {/* Liste des listes de courses */}        
@@ -109,7 +112,7 @@ const localStyles = StyleSheet.create({
     container: {
       //flex: 1,
       alignItems:"center",
-      paddingBottom:75,
+      paddingBottom:menuBarHeight,
     },
 
   });
