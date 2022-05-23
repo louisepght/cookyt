@@ -62,6 +62,11 @@ export default styles = StyleSheet.create({
       fontWeight:'bold',
       margin: 20,
     },
+    subtitleText: {
+      fontSize:20,
+      fontWeight:'bold',
+      margin: 20,
+    },
     titleContainer:{
       //margin:10,
       padding:10
