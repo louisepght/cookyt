@@ -105,7 +105,7 @@ export default styles = StyleSheet.create({
     },
     writeSomethingTextView: {
       padding:10,
-      width:'70%',
+      //width:'70%',
       //borderColor:'#555',
       //borderWidth:0.2,
       borderRadius:25,

@@ -80,7 +80,7 @@ class GroceryListScreen extends React.Component{
         
         <KeyboardAvoidingView 
               behavior={Platform.OS === "ios" ? "padding" : "height"}
-              style={[styles.writeSomethingViewContainer]}>
+              style={[styles.writeSomethingViewContainer, {marginRight:25, marginLeft:25}]}>
           <View style={styles.writeSomethingTextView}>
             <TextInput style={styles.input} placeholder={"Créer une nouvelle liste"} 
               ref={input => { this.textInput = input }}

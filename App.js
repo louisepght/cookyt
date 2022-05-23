@@ -10,11 +10,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 //Screens
-import Home from './app/screens/Home';
+import HomeScreen from './app/screens/HomeScreen';
 import SearchScreen from './app/screens/SearchScreen';
 import LibrairiesScreen from './app/screens/LibrairiesScreen';
 import GroceryListScreen from './app/screens/GroceryListScreen';
-import GroceryListScreenNavigator from './app/components/CustomStackNavigation';
+import {GroceryListScreenNavigator, HomeScreenNavigator} from './app/components/CustomStackNavigation';
 import GroceryListDetails from './app/screens/GroceryListDetails';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import styles from './app/Styles'
@@ -52,7 +52,7 @@ export default function App() {
 
         }
       }}>
-      <Tab.Screen name="Home" component={Home} options={{
+      <Tab.Screen name="Home" component={HomeScreenNavigator} options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/home.png')}

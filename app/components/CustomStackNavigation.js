@@ -6,14 +6,15 @@ import React from 'react'
 
 import GroceryListScreen from '../screens/GroceryListScreen';
 import GroceryListDetails from '../screens/GroceryListDetails';
-import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
+import HomeScreen from '../screens/HomeScreen';
+import RecipeScreen from '../screens/RecipeScreen';
 
 const Stack = createNativeStackNavigator();
 
 
 
-export default function GroceryListScreenNavigator() {
+function GroceryListScreenNavigator() {
   return (
     <Stack.Navigator screenOptions={{
         headerShown: false,
@@ -35,4 +36,29 @@ export default function GroceryListScreenNavigator() {
   )
 }
 
+
+function HomeScreenNavigator() {
+  return (
+    <Stack.Navigator screenOptions={{
+        headerShown: false,
+        headerTitleStyle:{
+            fontSize:1,
+            color:"#fff"
+            
+        }
+      }}>
+        <Stack.Screen 
+        name="Home"
+        component={HomeScreen}
+        />
+        <Stack.Screen 
+        name="Recipe"
+        component={RecipeScreen}
+        />
+    </Stack.Navigator>
+  )
+}
+
 const styles = StyleSheet.create({})
+
+export {GroceryListScreenNavigator, HomeScreenNavigator};
