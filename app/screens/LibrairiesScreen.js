@@ -9,6 +9,7 @@ import recipelibraries from '../lists/recipelibraries';
 import ListComponent from '../components/ListComponent';
 import SearchBar from '../components/SearchBar';
 import NavBar from '../components/NavBar';
+import LibraryListModel from '../models/LibraryListModel'
 
 
 class LibrairiesScreen extends Component{
@@ -20,7 +21,38 @@ class LibrairiesScreen extends Component{
   }
 
 
-  componentDidMount(){
+  componentDidMount() {
+    //après avoir monté le composant, on charge les listes depuis le fichier JSON et on les ajoute au tableau glistItems
+    const data = require('../lists/recipelibraries.json');
+    for(var i=0; i<data.length; i++){
+      var obj = data[i];
+      if(obj.hasOwnProperty('libraryname') && obj.libraryname.length>0){
+        let liste = new LibraryListModel(obj.libraryname);
+        if(obj.hasOwnProperty('contributors')){
+          liste.setContributors(obj.contributors);
+        }
+        {/** 
+        if(obj.hasOwnProperty('recipes')){
+          liste.setItems(obj.items);
+        }
+        */}
+        this.glistItems.push(liste);
+      }
+    }
+    this.setState({ text:'' }); //ça sert juste à appeler render une fois qu'on a ajouté les listes de courses au tableau
+  }
+
+  handleAddGlist = () => {
+    if(this.state.text && this.state.text.length>0){
+      let liste = new LibraryListModel(this.state.text);
+      this.glistItems.push(liste);
+      this.setState({text:''});
+      Keyboard.dismiss();
+      this.textInput.clear();
+      //il faut aussi ajouter la nouvelle liste au json
+      data.push(liste);
+      //await writeJsonFile('../data/groceries.json', data);    
+    }
   }
 
   render(){
@@ -49,7 +81,9 @@ class LibrairiesScreen extends Component{
 
            
 
-            <View>
+            <View style={localstyles.container}>
+              
+              {/* Liste des listes de courses    
               <FlatList
                 scrollEnabled={false}
                 data={recipelibraries}
@@ -58,6 +92,11 @@ class LibrairiesScreen extends Component{
                   <ListComponent navigation={this.props.navigation} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 )}>
               </FlatList>
+              */}
+
+              {this.glistItems.map( (item, index) => {
+                return  <ListComponent key={index} navigation={this.props.navigation} liste={item} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
+                })}
             
              
             </View>
@@ -83,6 +122,11 @@ const localstyles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor:COLORS.pageBackgroundGray,
     },
+    container: {
+      //flex: 1,
+      alignItems:"center",
+      paddingBottom:75,
+    }
   });
 
 export default LibrairiesScreen;

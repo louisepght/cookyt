@@ -2,15 +2,21 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, KeyboardAvoidingView, Keyboard, Platform, TextInput, TouchableOpacity, Image  } from 'react-native'
 import LibrairiesScreen from './LibrairiesScreen';
 import { ScrollView } from 'react-native-gesture-handler';
+import ReturnScreenButton from '../components/ReturnScreenButton';
+import * as data from '../lists/recipelibraries.json'
 
-function RecipesListScreen({navigation}) {
+function RecipesListScreen({route,navigation}) {
+    let {liste} = route.params; 
+
+
  
-  return (
-    <View >
-        <Text>Hello world</Text>
-      
-    </View>
-  )
+    return (
+        <View style={ [styles.androidSafeArea, localStyles.mainContainer]}>
+          <ReturnScreenButton navigation={navigation}/>
+          <View style={localStyles.mainContainer}>
+          </View>
+        </View>
+      )
 }
 
 const localStyles = StyleSheet.create({

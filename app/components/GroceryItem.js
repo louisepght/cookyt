@@ -13,10 +13,6 @@ export default function GroceryItem(props) {
 
     </View>
 
-
-
-
-
     //<View style={localStyles.container2}>
       //<Text style={localStyles.text}>{name}</Text>
   //</View>*/}
