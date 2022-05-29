@@ -11,8 +11,8 @@ import SearchBar from '../components/SearchBar';
 
 
 class LibrairiesScreen extends Component{
-  componentWillMount(){
-  }
+
+  
 
   render(){
     return(

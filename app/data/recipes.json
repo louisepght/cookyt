@@ -1,0 +1,27 @@
+[
+	{
+		"name":"Spaghettis aux crevettes",
+		"path":"../data/recipes/spaghettis_crevettes.json",
+		"image":"https://www.cookomix.com/wp-content/uploads/2017/03/spaghetti-crevettes-thermomix.jpg"
+	},
+	{
+		"name":"Semoule aux olives",
+		"path":"../data/recipes/semoule_olives.json",
+		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+	},
+    {
+		"name":"Semoule aux olives",
+		"path":"../data/recipes/semoule_olives.json",
+		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+	},
+    {
+		"name":"Semoule aux olives",
+		"path":"../data/recipes/semoule_olives.json",
+		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+	},
+    {
+		"name":"Semoule aux olives",
+		"path":"../data/recipes/semoule_olives.json",
+		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+	}
+]

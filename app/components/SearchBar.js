@@ -5,7 +5,7 @@ import { COLORS } from "../values/colors";
 
 {/*https://blog.logrocket.com/create-react-native-search-bar-from-scratch/ */}
 
-const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
+const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setClicked}) => {
   return (
     <View style={styles.container}>
       <View
