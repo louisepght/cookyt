@@ -14,6 +14,7 @@ function RecipesListScreen({route,navigation}) {
         <View style={ [styles.androidSafeArea, localStyles.mainContainer]}>
           <ReturnScreenButton navigation={navigation}/>
           <View style={localStyles.mainContainer}>
+            <Text> RecipeListScreen</Text>
           </View>
         </View>
       )
