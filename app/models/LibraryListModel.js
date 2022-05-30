@@ -1,6 +1,6 @@
 class LibraryListModel{
     constructor(name){
-        this.libraryname = name;
+        this.name = name;
         this.contributors = [];
         this.recipes = [];
     }

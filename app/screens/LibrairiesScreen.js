@@ -26,16 +26,16 @@ class LibrairiesScreen extends Component{
     const data = require('../lists/recipelibraries.json');
     for(var i=0; i<data.length; i++){
       var obj = data[i];
-      if(obj.hasOwnProperty('libraryname') && obj.libraryname.length>0){
-        let liste = new LibraryListModel(obj.libraryname);
+      if(obj.hasOwnProperty('name') && obj.name.length>0){
+        let liste = new LibraryListModel(obj.name);
         if(obj.hasOwnProperty('contributors')){
           liste.setContributors(obj.contributors);
         }
-        {/** 
+        {
         if(obj.hasOwnProperty('recipes')){
-          liste.setItems(obj.items);
+          liste.setRecipes(obj.recipes);
         }
-        */}
+        }
         this.glistItems.push(liste);
       }
     }
@@ -95,7 +95,7 @@ class LibrairiesScreen extends Component{
               */}
 
               {this.glistItems.map( (item, index) => {
-                return  <ListComponent key={index} navigation={this.props.navigation} liste={item} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
+                return  <ListComponent key={index} target={"RecipesListScreen"} navigation={this.props.navigation} liste={item} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.name} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 })}
             
              

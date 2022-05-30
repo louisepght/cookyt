@@ -1,6 +1,6 @@
 [
     {
-        "libraryname": "Mes recettes préférées",
+        "name": "Mes recettes préférées",
         "contributors":["Céline", "Michel"],
 		"recipes":[
 			{"name":"Quiche au thon"},
@@ -27,24 +27,19 @@
 		]
     },
     {
-        "libraryname": "Recettes faciles"
+        "name": "Recettes faciles"
     },
     {
-        "libraryname": "Dîner"
+        "name": "Dîner"
     },
     {
-        "libraryname": "Pâtisserie"
+        "name": "Pâtisserie"
     },
     {
-        "libraryname": "Brunch"
+        "name": "Brunch"
     },
     {
-        "libraryname": "Epater la galerie"
-    },
-    {
-        "libraryname": "Recette pour la semaine"
-    },
-    {
-        "libraryname": "Coloc"
+        "name": "Epater la galerie"
     }
+   
 ]
