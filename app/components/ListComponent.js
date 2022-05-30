@@ -1,7 +1,6 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, Image, Dimensions, TouchableOpacity } from 'react-native'
 import { Component } from "react"
 import React from 'react'
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import styles from '../Styles'
 import { log } from 'react-native-reanimated';
 
