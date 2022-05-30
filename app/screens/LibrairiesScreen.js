@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, StatusBar, SafeAreaView, FlatList } from 'react-native'
+import { StyleSheet, Text, View, StatusBar, SafeAreaView, FlatList, Image } from 'react-native'
 import React from 'react'
 import styles from '../Styles'
 import { ScrollView } from 'react-native-gesture-handler';
@@ -8,10 +8,51 @@ import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNat
 import recipelibraries from '../lists/recipelibraries';
 import ListComponent from '../components/ListComponent';
 import SearchBar from '../components/SearchBar';
+import NavBar from '../components/NavBar';
+import LibraryListModel from '../models/LibraryListModel'
 
 
 class LibrairiesScreen extends Component{
-  componentWillMount(){
+
+  constructor( props) {
+    super(props);
+    this.state = {text: ''}
+    this.glistItems=[];
+  }
+
+
+  componentDidMount() {
+    //après avoir monté le composant, on charge les listes depuis le fichier JSON et on les ajoute au tableau glistItems
+    const data = require('../lists/recipelibraries.json');
+    for(var i=0; i<data.length; i++){
+      var obj = data[i];
+      if(obj.hasOwnProperty('name') && obj.name.length>0){
+        let liste = new LibraryListModel(obj.name);
+        if(obj.hasOwnProperty('contributors')){
+          liste.setContributors(obj.contributors);
+        }
+        {
+        if(obj.hasOwnProperty('recipes')){
+          liste.setRecipes(obj.recipes);
+        }
+        }
+        this.glistItems.push(liste);
+      }
+    }
+    this.setState({ text:'' }); //ça sert juste à appeler render une fois qu'on a ajouté les listes de courses au tableau
+  }
+
+  handleAddGlist = () => {
+    if(this.state.text && this.state.text.length>0){
+      let liste = new LibraryListModel(this.state.text);
+      this.glistItems.push(liste);
+      this.setState({text:''});
+      Keyboard.dismiss();
+      this.textInput.clear();
+      //il faut aussi ajouter la nouvelle liste au json
+      data.push(liste);
+      //await writeJsonFile('../data/groceries.json', data);    
+    }
   }
 
   render(){
@@ -29,9 +70,7 @@ class LibrairiesScreen extends Component{
 
 
             <View style={{flex:1}}>
-              <Text style = {styles.titleText}>
-                Search bar
-              </Text>
+
 
               <SearchBar></SearchBar>
               
@@ -40,22 +79,24 @@ class LibrairiesScreen extends Component{
             </View>
 
 
-            <View>
-              <Text style = {styles.titleText}>
-              menu nav bar
-              </Text>
-             
-            </View>
+           
 
-            <View>
+            <View style={localstyles.container}>
+              
+              {/* Liste des listes de courses    
               <FlatList
                 scrollEnabled={false}
                 data={recipelibraries}
                 keyExtractor={item => item.libraryname}
                 renderItem={({item}) => (
-                  <ListComponent backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
+                  <ListComponent navigation={this.props.navigation} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.libraryname} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
                 )}>
               </FlatList>
+              */}
+
+              {this.glistItems.map( (item, index) => {
+                return  <ListComponent key={index} target={"RecipesListScreen"} navigation={this.props.navigation} liste={item} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text={item.name} imageUri={require('../assets/crevettes.jpg')}></ListComponent>
+                })}
             
              
             </View>
@@ -81,6 +122,11 @@ const localstyles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor:COLORS.pageBackgroundGray,
     },
+    container: {
+      //flex: 1,
+      alignItems:"center",
+      paddingBottom:75,
+    }
   });
 
 export default LibrairiesScreen;

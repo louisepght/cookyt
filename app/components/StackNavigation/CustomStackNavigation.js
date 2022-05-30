@@ -4,8 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-import GroceryListScreen from '../screens/GroceryListScreen';
-import GroceryListDetails from '../screens/GroceryListDetails';
+import GroceryListScreen from '../../screens/GroceryListScreen';
+import GroceryListDetails from '../../screens/GroceryListDetails';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 import HomeScreen from '../screens/HomeScreen';
 import RecipeScreen from '../screens/RecipeScreen';

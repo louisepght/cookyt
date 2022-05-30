@@ -15,6 +15,8 @@ import SearchScreen from './app/screens/SearchScreen';
 import LibrairiesScreen from './app/screens/LibrairiesScreen';
 import GroceryListScreen from './app/screens/GroceryListScreen';
 import {GroceryListScreenNavigator, HomeScreenNavigator} from './app/components/CustomStackNavigation';
+import GroceryListScreenNavigator from './app/components/StackNavigation/CustomStackNavigation';
+import LibrariesStackNavigation from './app/components/StackNavigation/LibrariesStackNavigation';
 import GroceryListDetails from './app/screens/GroceryListDetails';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import styles from './app/Styles'
@@ -79,7 +81,7 @@ export default function App() {
           </View>
         )
       }}/>
-      <Tab.Screen name="Librairies" component={LibrairiesScreen}  options={{
+      <Tab.Screen name="Librairies" component={LibrariesStackNavigation}  options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/menu-burger.png')}
@@ -88,6 +90,7 @@ export default function App() {
           </View>
         )
       }}/>
+
 
 
     </Tab.Navigator>

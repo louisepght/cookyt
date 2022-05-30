@@ -5,13 +5,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { CheckBox, Icon } from '@rneui/themed';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
-/*
-function oui(){
-  return(
-    <Image source={require("..\assests\add2.png")} />
-  )
-}*/
-
 
 class GroceryItem extends React.Component {
   
