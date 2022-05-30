@@ -6,6 +6,7 @@ import { Component } from 'react/cjs/react.production.min';
 import { COLORS } from '../values/colors';
 import SearchBar from '../components/SearchBar';
 import RecipeItemList from '../components/RecipeItemList';
+import RecipeItemResearch from '../components/RecipeItemResearch';
 
 function SearchScreen() {
   console.log("search");
@@ -31,22 +32,11 @@ function SearchScreen() {
                   Top recherches
                 </Text>
             </View>
-            <View style={{flexDirection:'row', marginStart:20,marginEnd:20}}>
-
-              <View style={{flexDirection:'column'}}>
-                <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Mes recettes préférées' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Dîner' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Brunch' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Recette pour la semaine' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                
-              </View>
-              <View style={{flexDirection:'column'}}>
-                <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Recettes faciles' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Pâtisserie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Epater la galerie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Coloc' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-              </View>
-            </View>
+            <View style={{flexDirection:'column', marginStart:20,marginEnd:20}}>
+              <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="Spaghettis aux crevettes et pesto" color='#32582B' fontcolor='#fff'></RecipeItemResearch>
+                                  <RecipeItemResearch imageUri={require('../assets/semoule-framboise.jpg')} name="Semoule aux framboises" color='#fff' ></RecipeItemResearch>
+                                  <RecipeItemResearch imageUri={require('../assets/tiramisu.png')} name="Tiramisu aux olives" color='#000' fontcolor='#fff'></RecipeItemResearch>
+                                  <RecipeItemResearch imageUri={require('../assets/bouillie.jpg')} name="La bouillie qui nourrit" color='#fff'></RecipeItemResearch></View>
           </View>
 
           <View style={{flex:1}}>
@@ -55,22 +45,14 @@ function SearchScreen() {
                   Tout
                 </Text>
             </View>
-            <View style={{flexDirection:'row', marginStart:20,marginEnd:20}}>
-
-              <View style={{flexDirection:'column'}}>
-                <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Mes recettes préférées' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Dîner' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Brunch' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Recette pour la semaine' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                
+            <View style={{flexDirection:'column', marginStart:20,marginEnd:20}}>
+                <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="Spaghettis aux crevettes et pesto" color='#32582B' fontcolor='#fff'></RecipeItemResearch>
+                                    <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="SDemoule aux olives" color='#fff' ></RecipeItemResearch>
+                                    <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="Tiramisu aux framboises" color='#000' fontcolor='#fff'></RecipeItemResearch>
+                                    <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="Quiche au thon" color='#fff'></RecipeItemResearch>
+                                    <RecipeItemResearch imageUri={require('../assets/crevettes.jpg')} name="Gateau au chocolat" color='#32582B' fontcolor='#fff'></RecipeItemResearch>     
+                  
               </View>
-              <View style={{flexDirection:'column'}}>
-                <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Recettes faciles' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Pâtisserie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Epater la galerie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Coloc' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-              </View>
-            </View>
           </View>
 
       </ScrollView>
