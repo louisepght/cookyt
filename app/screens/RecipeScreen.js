@@ -1,39 +1,57 @@
-import { Text, View, SafeAreaView, StyleSheet, Image } from 'react-native'
-import React, { Component } from 'react'
+import { Text, View, SafeAreaView, StyleSheet, Image, LogBox  } from 'react-native'
+import React, { Component, useEffect } from 'react'
 import styles from '../Styles'
 import StarRating from 'react-native-star-rating';
 import { COLORS } from '../values/colors';
-import * as data from '../data/recipes/spaghettis_crevettes.json';
 import ReturnScreenButton from '../components/ReturnScreenButton';
 import { ScrollView } from 'react-native-gesture-handler';
 
+import database from '../config'
+import {ref, onValue,  child, get} from "firebase/database";
+import { Button } from 'react-native-elements';
+
+import RecipeModel from '../models/RecipeModel';
+
+
+//console.log(database);
 
 export default class RecipeScreen extends Component {
 
   constructor(props){
     super(props);
-    this.state = {text: ''};
-    //console.log(props.route.params.recipe);
-    
+    this.path = props.route.params.recipe;
+    this.state = {hasMount: false};
+    this.data = new RecipeModel("default");
   }
 
   componentDidMount(){
-    //console.log(path)
-    const data = require("../data/recipes/spaghettis_crevettes.json");
-    //console.log(data);
-    this.setState({text:''})
+    this.readData();
+    this.setState({hasMount: true});
+    LogBox.ignoreLogs(['source.uri should not be an empty string']);
+  }
+
+  readData = () => {
+    const starCountRef = ref(database, 'Recipes/'+this.path);
+    var data2;
+    onValue(starCountRef, (snapshot) => {
+      data2 = snapshot.val();
+      this.data.setName(data2.name);
+      this.data.setImage(data2.image);
+      this.data.setRating(data2.rating);
+      //console.log("DATA2:\n"+data2+"\n########\n");
+      this.setState({hasMount: true});
+    });
   }
 
   render() {
-    //console.log(data);
     return (
       <SafeAreaView style={styles.androidSafeArea}>
         <View style={[styles.titleContainer , {flexDirection:'row'}]}>
           <ReturnScreenButton navigation={this.props.navigation}/>
-          <Text style={[styles.titleText, {margin:10, marginTop:0}]}>{data.name}</Text>
+          <Text style={[styles.titleText, {margin:10, marginTop:0}]}>{this.data.name}</Text>
         </View>
-        
-        <Image style={localstyles.imageStyle} source={{uri: data.image}}></Image>
+
+        <Image style={localstyles.imageStyle} source={{uri: this.data.image}}></Image>   
 
         <ScrollView>
           <View style={localstyles.infosContainer}>
@@ -60,7 +78,7 @@ export default class RecipeScreen extends Component {
                 starSize={20}
                 disabled={true}
                 maxStars={5}
-                rating={data.rating}
+                rating={this.data.rating}
                 iconSet={'Ionicons'}
                 emptyStar={'heart-outline'}
                 fullStar={'heart'}
@@ -71,7 +89,7 @@ export default class RecipeScreen extends Component {
                 containerStyle={localstyles.starsContainer}
               />
               <Text>
-                {data.rating}/5
+                {this.data.rating}/5
               </Text>
             </View>
           </View>
@@ -86,7 +104,6 @@ export default class RecipeScreen extends Component {
 
 
           </View>
-
         </ScrollView>
       </SafeAreaView>
     )

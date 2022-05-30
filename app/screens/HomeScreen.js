@@ -84,6 +84,7 @@ class HomeScreen extends React.Component{
                                   <Category navigation={this.props.navigation} imageUri={require('../assets/crevettes.jpg')} name="Gateau au chocolat" color='#32582B' fontcolor='#fff' recipe={this.data[0]}></Category>     
                 </ScrollView>
     */}
+    
               <ScrollView horizontal={true}
                   showsHorizontalScrollIndicator={false}
                   scrollEventThrottle={16}
