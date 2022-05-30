@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React, { useState } from 'react';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { CheckBox, Icon } from '@rneui/themed';
+//import { CheckBox, Icon } from '@rneui/themed';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 

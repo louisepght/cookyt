@@ -8,8 +8,8 @@ import GroceryListScreen from '../../screens/GroceryListScreen';
 import GroceryListDetails from '../../screens/GroceryListDetails';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
-import HomeScreen from '../screens/HomeScreen';
-import RecipeScreen from '../screens/RecipeScreen';
+import HomeScreen from '../../screens/HomeScreen';
+import RecipeScreen from '../../screens/RecipeScreen';
 
 const Stack = createNativeStackNavigator();
 
