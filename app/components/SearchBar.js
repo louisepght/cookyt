@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, TextInput, View, Keyboard, Button } from "react-native";
 import { Feather, Entypo } from "@expo/vector-icons";
 import { COLORS } from "../values/colors";
 
 {/*https://blog.logrocket.com/create-react-native-search-bar-from-scratch/ */}
 
-const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
+const SearchBar = () => {
+  const [clicked, setClicked] = useState(false);
+  const [searchPhrase, setSearchPhrase] = useState("");
   return (
     <View style={styles.container}>
       <View
@@ -13,8 +15,6 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
           clicked
             ? styles.searchBar__clicked
             : styles.searchBar__unclicked
-
-            
         }
       >
         {/* search Icon */}
@@ -39,22 +39,11 @@ const SearchBar = ({clicked, searchPhrase, setSearchPhrase, setCLicked}) => {
         {clicked && (
           <Entypo name="cross" size={20} color="black" style={{ padding: 1 }} onPress={() => {
               setSearchPhrase("")
+              Keyboard.dismiss();
+              setClicked(false);
           }}/>
         )}
       </View>
-      {/* cancel button, depending on whether the search bar is clicked or not */}
-      {clicked && (
-        <View>
-          <Button
-            title="Cancel"
-            
-            onPress={() => {
-              Keyboard.dismiss();
-              setClicked(false);
-            }}
-          ></Button>
-        </View>
-      )}
     </View>
   );
 };
@@ -63,7 +52,7 @@ export default SearchBar;
 // styles
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    marginHorizontal: 20,
     justifyContent: "flex-start",
     alignItems: "center",
     flexDirection: "row",
@@ -81,7 +70,7 @@ const styles = StyleSheet.create({
   searchBar__clicked: {
     padding: 10,
     flexDirection: "row",
-    width: "80%",
+    width: "95%",
     backgroundColor: "#d9dbda",
     borderRadius: 15,
     alignItems: "center",
