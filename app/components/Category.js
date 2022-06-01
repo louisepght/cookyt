@@ -13,7 +13,7 @@ class Category extends Component{
     render(){
         return(
             <TouchableOpacity style={{flex:1, marginLeft:10, marginEnd:10}}
-            onPress={() => {console.log("Navigue"); this.props.navigation.navigate('Recipe')}}>
+            onPress={() => {this.props.navigation.navigate('Recipe', {recipe: this.props.recipe})}}>
                                         <View style={{height:130, width: 130, backgroundColor:this.props.color, borderRadius:20}}>
                                               <View style={{flex:2}}>
                                                 <Image source={this.props.imageUri} style={{flex: 1, height:null,width:null, marginTop:10, marginLeft:20, marginRight:20,marginBottom:0, borderRadius:20}}></Image>

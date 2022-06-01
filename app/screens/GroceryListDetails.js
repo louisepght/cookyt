@@ -36,12 +36,6 @@ class GroceryListDetails extends React.Component{
     console.log(menuBarHeight);
   }
 
-
-
-
-
-
-
   handleAddPlist = () => { //Pour l'ajout d'un produit dans la liste des produits
     if(this.state.text && this.state.text.length>0){
       let item = new ItemModel(this.state.text);
