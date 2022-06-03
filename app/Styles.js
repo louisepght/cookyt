@@ -37,8 +37,7 @@ export default styles = StyleSheet.create({
     androidSafeArea: {
       paddingTop: Platform.OS === 'android' ?  StatusBar.currentHeight : 0,
       flex:1,
-      //backgroundColor: colors.get("white"),
-      //paddingBottom:75,
+      paddingBottom:75,
       backgroundColor:COLORS.pageBackgroundGray
 
     },

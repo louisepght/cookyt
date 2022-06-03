@@ -7,7 +7,7 @@ import ReturnScreenButton from '../components/ReturnScreenButton';
 import { ScrollView } from 'react-native-gesture-handler';
 
 import database from '../config'
-import {ref, onValue,  child, get} from "firebase/database";
+import {ref, onValue} from "firebase/database";
 import { Button } from 'react-native-elements';
 import RecipeIngredient from '../components/RecipeIngredient';
 import RecipeStep from '../components/RecipeStep';
@@ -121,7 +121,7 @@ export default class RecipeScreen extends Component {
 
             <View style={localstyles.stepsContainer}>            
                 {this.data.steps.map( (it, index) => {
-                  return <RecipeStep  item={it} key={index}/>
+                  return <RecipeStep  item={it} key={index} number={index+1}/>
                 })}
             </View> 
 
@@ -177,7 +177,7 @@ const localstyles = StyleSheet.create({
     fontSize:25
   },
   ingredientsContainer:{
-
+    marginBottom:10
   },
   stepsContainer:{
 
