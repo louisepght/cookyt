@@ -9,6 +9,8 @@ import { ScrollView } from 'react-native-gesture-handler';
 import database from '../config'
 import {ref, onValue,  child, get} from "firebase/database";
 import { Button } from 'react-native-elements';
+import RecipeIngredient from '../components/RecipeIngredient';
+import RecipeStep from '../components/RecipeStep';
 
 import RecipeModel from '../models/RecipeModel';
 
@@ -38,12 +40,14 @@ export default class RecipeScreen extends Component {
       this.data.setName(data2.name);
       this.data.setImage(data2.image);
       this.data.setRating(data2.rating);
-      //console.log("DATA2:\n"+data2+"\n########\n");
+      this.data.setIngredients(data2.ingredients);
+      this.data.setSteps(data2.steps);
       this.setState({hasMount: true});
     });
   }
 
   render() {
+    console.log(this.data)
     return (
       <SafeAreaView style={styles.androidSafeArea}>
         <View style={[styles.titleContainer , {flexDirection:'row'}]}>
@@ -51,9 +55,10 @@ export default class RecipeScreen extends Component {
           <Text style={[styles.titleText, {margin:10, marginTop:0}]}>{this.data.name}</Text>
         </View>
 
+        <ScrollView>
+
         <Image style={localstyles.imageStyle} source={{uri: this.data.image}}></Image>   
 
-        <ScrollView>
           <View style={localstyles.infosContainer}>
             <View style={localstyles.infoIconContainer}>
               <Image source={require('../assets/knife.png')}
@@ -99,8 +104,28 @@ export default class RecipeScreen extends Component {
               <Text style={localstyles.sectionTitle}>
                 Ingrédients:
               </Text>
-
             </View>
+
+            <View style={localstyles.ingredientsContainer}>            
+                {this.data.ingredients.map( (it, index) => {
+                  return <RecipeIngredient  item={it} key={index}/>
+                })}
+            </View> 
+
+
+            <View style={localstyles.sectionTitleContainer}>
+              <Text style={localstyles.sectionTitle}>
+                Préparation:
+              </Text>
+            </View>
+
+            <View style={localstyles.stepsContainer}>            
+                {this.data.steps.map( (it, index) => {
+                  return <RecipeStep  item={it} key={index}/>
+                })}
+            </View> 
+
+            
 
 
           </View>
@@ -150,5 +175,11 @@ const localstyles = StyleSheet.create({
   },
   sectionTitle:{
     fontSize:25
+  },
+  ingredientsContainer:{
+
+  },
+  stepsContainer:{
+
   }
 });

@@ -2,7 +2,27 @@
     "name":"Spaghettis aux crevettes",
     "image":"https://www.cookomix.com/wp-content/uploads/2017/03/spaghetti-crevettes-thermomix.jpg",
     "rating":4.35,
+	"nbPersons":6,
     "ingredients":[
-
-    ]
+		{"name":"Spaghettis", "quantity":800, "quantityType":"g"},
+		{"name":"Crevettes décortiquées", "quantity":800, "quantityType":"g"},
+		{"name":"Oignons", "quantity":2},
+		{"name":"Tomattes concassées", "quantity":500, "quantityType":"g"},
+		{"name":"Thym"},
+		{"name":"Poivre"},
+		{"name":"Paprika"},
+		{"name":"Sel"},
+		{"name":"Ail", "quantity":2, "quantityType":"gousses"},
+		{"name":"Vin blanc sec", "quantity":20, "quantityType":"cl"},
+		{"name":"Crème épaisse", "quantity":1, "quantityType":"pot"}
+    ],
+	"steps":[
+		"Dans une grande casserole, faire revenir les 2 oignons coupés en petits dés dans un peu de matière grasse. ",
+		"Ajouter le vin blanc sec, les tomattes et le thym; laisser réduire à feu doux environ 15 min, puis ajouter la crème épaisse. Ajouter un peu d'ail moulu, sel et poivre.  ",
+		"Laisser mijoter doucement tout en remuant de temps en temps.  ",
+		"Faire cuire les spaghetti dans une grande casserole d'eau bouillante salée, avec une cuillère d'huile, le temps indiqué sur le paquet. ",
+		"Ajouter doucement les crevettes à la sauce puis le paprika et laisser mijoter environ 10 min; rectifier l'assaisonnement si nécessaire. ",
+		"Dans une grande casserole, faire revenir les 2 oignons coupés en petits dés dans un peu de matière grasse. ",
+		"Servir les spaghetti avec la sauce et les crevettes. "
+	]
 }

@@ -4,6 +4,8 @@ class RecipeModel{
     name="";
     image="";
     rating=0;
+    ingredients=[];
+    steps=[];
     constructor(name){
         this.name = name;
     }
@@ -16,6 +18,14 @@ class RecipeModel{
     }
     setRating(newRating){
         this.rating=newRating;
+    }
+    setIngredients(newIngredientsTab){
+        //verifier que c'est bien un tableau d'abord
+        this.ingredients = newIngredientsTab;
+    }
+    setSteps(newStepsTab){
+        //verifier que c'est bien un tableau d'abord
+        this.steps=newStepsTab;
     }
 }
 
