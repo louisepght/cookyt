@@ -38,7 +38,7 @@ function RecipesListScreen({route,navigation}) {
           {liste.items.map( (it, index) => {
                 //console.log(it);
                 
-                return <ListComponent  backgroundColor={COLORS.kaki} fontcolor={COLORS.white} liste={it} target={'RecipesListScreen'} ></ListComponent>
+                return <ListComponent navigation={navigation} backgroundColor={COLORS.kaki} fontcolor={COLORS.white} liste={it} target={'RecipesListScreen'} ></ListComponent>
               })}
             
 

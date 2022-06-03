@@ -6,9 +6,8 @@ import { menuBarHeight } from '../values/constantes';
 import ReturnScreenButton from '../components/ReturnScreenButton'
 import SharedUser from '../components/SharedUser'
 import GroceryItem from '../components/GroceryItem';
-import ItemModel from '../models/itemModel';
+import ItemModel from '../models/ItemModel';
 
-import * as data from '../data/groceryLists/MaListe.json';
 import { ScrollView } from 'react-native-gesture-handler'
  
 
@@ -22,7 +21,6 @@ class GroceryListDetails extends React.Component{
 
     //let {liste} = props.route.params;
     //this.liste.name="oui";
-    const parsedData =  JSON.parse(JSON.stringify(data)); //makes a clean copy of data
 
     //let [plist, setPlist] = useState(); //utilisé pour le produit à ajouter
     //let [plistItems, setPlistItems] = useState([]); //utilisé pour tous les produits de la liste
