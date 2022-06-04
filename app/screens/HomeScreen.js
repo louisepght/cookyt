@@ -32,6 +32,7 @@ class HomeScreen extends React.Component{
   }
 
   render(){
+    console.log(this.state.recommendations);
     return(
       <SafeAreaView  style={styles.androidSafeArea}>
         <View style={{flexDirection:'column'}}>
@@ -90,7 +91,7 @@ class HomeScreen extends React.Component{
                   scrollEventThrottle={16}
                   style = {{marginLeft:10, marginEnd:10}}>
                 {this.state.recommendations.map( (item, index) => {
-                return <Category navigation={this.props.navigation} imageUri={require('../assets/crevettes.jpg')} name={item.name} color='#32582B' fontcolor='#fff' recipe={item.path} key={index}></Category>
+                return <Category navigation={this.props.navigation} imageUri={item.image} name={item.name} color='#32582B' fontcolor='#fff' recipe={item.path} key={index}></Category>
                 })}
               </ScrollView>
               </View>

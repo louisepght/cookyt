@@ -1,0 +1,24 @@
+{
+    "name":"Tiramisu aux framboises",
+    "image":"https://tonmag.net/wp-content/uploads/2021/12/Tiramisu-aux-framboises-doux-et-rafraichissant.jpg",
+    "rating":4.65,
+	"nbPersons":4,
+    "ingredients":[
+		{"name":"Mascarpone", "quantity":250, "quantityType":"g"},
+		{"name":"Boudoirs", "quantity":30},
+		{"name":"Famboises", "quantity":250, "quantityType":"g"},
+		{"name":"Oeufs", "quantity":3},
+		{"name":"Coulis de framboise", "quantity":20, "quantityType":"cl"},
+		{"name":"Sucre", "quantity":30, "quantityType":"g"}
+    ],
+	"steps":[
+		"Faire un jus avec de l’eau et une cuillère à soupe de sucre, puis mettre dans un bol.",
+		"Mouiller dans ce jus 15 boudoirs jusqu’à la moitié et 15 autres jusqu’au 2/3.",
+		"Séparer les blancs des jaunes et monter les blancs en neige. Battre les jaunes avec le reste du sucre jusqu’à ce que le mélange blanchisse.",
+		"Incorporer le mascarpone à la préparation puis les blancs en neige, sans les casser.",
+		"Prendre un moule et disposer les boudoirs mouillés au 2/3 au fond. Veiller à ce que les faces sèches soient vers le bas, c’est important. Parsemer le dessus de framboises écrasées.",
+		"Verser une couche de la crème au mascarpone. Vous avez encore des boudoirs trempés à moitié, mettre seulement pour une deuxième couche.",
+		"Terminer la recette à la base par verser de la crème au mascarpone sur le tout. Vous pouvez décorer le plat avec des framboises fraiches.",
+		"Garder le tiramisu au frais pendant 2 heures."
+	]
+}

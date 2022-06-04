@@ -1,0 +1,21 @@
+{
+    "name":"Semoule aux olives",
+    "image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg",
+    "rating":3.6,
+	"nbPersons":2,
+    "ingredients":[
+		{"name":"Semoule moyenne", "quantity":140, "quantityType":"g"},
+		{"name":"Olives dénoyautées", "quantity":50, "quantityType":"g"},
+		{"name":"Citron", "quantity":"1/2"},
+		{"name":"Huile d'olive", "quantity":10, "quantityType":"cl"},
+		{"name":"Feta ", "quantity":50, "quantityType":"g"},
+		{"name":"Pignons de pain", "quantity":20, "quantityType":"g"}
+    ],
+	"steps":[
+		"Placer la semoule de couscous dans un saladier et verser par-dessus 15 cl d'eau bouillante. Couvrir 5 minutes le temps que la semoule gonfle..",
+		"En parallèle, disposer les pignons dans une poêle anti-adhérente et les faire dorer à sec en les remuant sans cesse pendant 3-4 minutes.",
+		"Egrainer la semoule à la fourchette.",
+		"L'assaisonner avec le jus de citron, l'huile d'olive et du sel. Mélanger. Ajouter les trois quarts des pignons et des olives coupées en rondelles.",
+		"Mélanger. Parsemer à la surface le reste des pignons et des olives. Ajouter des feuilles de coriandre. Pour une version plus riche, émietter un peu de feta, vegan ou non, sur la semoule. Déguster chaud, tiède ou froid, comme une salade ou en accompagnement."
+	]
+}

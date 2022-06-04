@@ -6,13 +6,13 @@
 	},
 	{
 		"name":"Semoule aux olives",
-		"path":"../data/recipes/semoule_olives.json",
+		"path":"semoule_olives",
 		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
 	},
     {
-		"name":"Semoule aux olives",
-		"path":"../data/recipes/semoule_olives.json",
-		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+		"name":"Tiramisu aux framboises",
+		"path":"tiramisu_framboises",
+		"image":"https://tonmag.net/wp-content/uploads/2021/12/Tiramisu-aux-framboises-doux-et-rafraichissant.jpg"
 	},
     {
 		"name":"Semoule aux olives",
