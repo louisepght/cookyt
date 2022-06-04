@@ -2,7 +2,9 @@ import { View, Text, StyleSheet, TouchableOpacity, Button, Dimensions } from 're
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { COLORS } from "../values/colors";
+import ItemModel from '../models/ItemModel';
 const { height, width } = Dimensions.get('window')
+
 
 export default function ModalAddToGroceryList(props) {
   return (
@@ -17,7 +19,7 @@ export default function ModalAddToGroceryList(props) {
 
         <ScrollView contentContainerStyle={localStyles.scrollview} style={{marginBottom:10}}>
             {mySharedGroceries.map( (item, index) => {
-                return <ViewGroceryList name={item.name}/>
+                return <ViewGroceryList item={item} ingredient={props.ingredient} key={index} changeVis={props.changeVisibility}/>
             })}
         </ScrollView>
         
@@ -37,12 +39,28 @@ export default function ModalAddToGroceryList(props) {
 
 function ViewGroceryList(props) {
   return (
-    <TouchableOpacity style={localStyles.touchableList}>
-      <Text style={localStyles.listText}>{props.name}</Text>
+    <TouchableOpacity style={localStyles.touchableList} onPress={() =>{ 
+        addToGroceryList(props.item, props.ingredient);
+        props.changeVis(false)}
+    }>
+      <Text style={localStyles.listText}>{props.item.name}</Text>
     </TouchableOpacity>
   )
 }
 
+
+function addToGroceryList(liste, ingredient){
+    if(liste && liste.items && ingredient && ingredient.name){
+        let newIngredient = new ItemModel(ingredient.name);
+        if(ingredient.quantity){
+            newIngredient.initializeQuantity(ingredient.quantity);
+            if(ingredient.quantityType){
+                newIngredient.quantityType = ingredient.quantityType;
+            }
+        }
+        liste.items.push(newIngredient);
+    }
+}
 
 const localStyles = StyleSheet.create({
     modalBack:{

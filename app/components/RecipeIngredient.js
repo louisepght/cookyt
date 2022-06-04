@@ -66,7 +66,7 @@ export default class RecipeIngredient extends Component {
 
           <Modal transparent={true} animationType='fade' visible={this.state.visibleModal}
           nRequestClose={()=> {this.setState({visibleModal:false})} }>
-            <ModalAddToGroceryList changeVisibility={this.changeVisibilityModal}/>
+            <ModalAddToGroceryList changeVisibility={this.changeVisibilityModal} ingredient={this.props.item}/>
           </Modal>
 
         </View>

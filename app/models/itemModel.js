@@ -2,12 +2,17 @@
 
 class ItemModel{
     name="";
-    quantity=0;
+    quantityIntial=0;
+    quantityLeft=0;
     bought=false;
     boughtBy="";
     boughtDate=null;
     constructor(name){
         this.name = name;
+    }
+    initializeQuantity(q){
+        this.quantityIntial=q;
+        this.quantityLeft=q;
     }
 }
 

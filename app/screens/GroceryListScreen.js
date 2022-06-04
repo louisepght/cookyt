@@ -97,7 +97,7 @@ class GroceryListScreen extends React.Component{
 
         <View style={localStyles.container}>
         {/* Liste des listes de courses */}        
-          {this.glistItems.map( (item, index) => {
+          {mySharedGroceries.map( (item, index) => {
             return <GroceryList navigation={this.props.navigation} liste={item} color={this.getAColor(index)} key={index}/>
           })}
         </View>

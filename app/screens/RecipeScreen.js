@@ -47,7 +47,6 @@ export default class RecipeScreen extends Component {
   }
 
   render() {
-    console.log(this.data)
     return (
       <SafeAreaView style={styles.androidSafeArea}>
         <View style={[styles.titleContainer , {flexDirection:'row'}]}>
