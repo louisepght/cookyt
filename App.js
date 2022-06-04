@@ -29,6 +29,7 @@ const librariesScreen = 'Librairies';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
+global.mySharedGroceries=  require('./app/data/groceries.json')
 
 export default function App() {
   return (

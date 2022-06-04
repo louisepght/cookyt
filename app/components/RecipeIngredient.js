@@ -1,9 +1,11 @@
-import { Text, View, StyleSheet, TouchableOpacity, Image, Alert } from 'react-native'
+import { Text, View, StyleSheet, TouchableOpacity, Image, Alert, Modal } from 'react-native'
 
 import React, { Component } from 'react'
 
 import styles from '../Styles';
 import { COLORS } from "../values/colors";
+
+import ModalAddToGroceryList from './ModalAddToGroceryList';
 
 export default class RecipeIngredient extends Component {
     constructor(props){
@@ -16,12 +18,20 @@ export default class RecipeIngredient extends Component {
           }
           this.textToDisplay+=')';
         }
-        this.state={added: false};
+        this.state={added: false, visibleModal:false};
     }
 
 
+    changeVisibilityModal = (boolValue) =>{
+      this.setState({visibleModal:boolValue})
+    }
+
     addToCart = () =>{
       this.setState({ added:true})
+      this.changeVisibilityModal(true)
+      //console.log(mySharedGroceries)
+
+      /*
       Alert.alert(
         "Alert Title",
         "My Alert Msg",
@@ -39,7 +49,8 @@ export default class RecipeIngredient extends Component {
               "This alert was dismissed by tapping outside of the alert dialog."
             ),
         }
-      )};
+       ) */
+      };
 
     render() {
         return (
@@ -52,7 +63,12 @@ export default class RecipeIngredient extends Component {
                 resizeMode='contain'
                 style={localStyles.cartImage}/>
           </TouchableOpacity>
-          
+
+          <Modal transparent={true} animationType='fade' visible={this.state.visibleModal}
+          nRequestClose={()=> {this.setState({visibleModal:false})} }>
+            <ModalAddToGroceryList changeVisibility={this.changeVisibilityModal}/>
+          </Modal>
+
         </View>
         )
     }
