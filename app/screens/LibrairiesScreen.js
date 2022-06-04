@@ -7,7 +7,7 @@ import { COLORS } from '../values/colors';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import recipelibraries from '../lists/recipelibraries';
 import ListComponent from '../components/ListComponent';
-import SearchBar from '../components/SearchBar';
+import SearchBar from '../components/SearchBarLibrary';
 import NavBar from '../components/NavBar';
 import LibraryListModel from '../models/LibraryListModel'
 
