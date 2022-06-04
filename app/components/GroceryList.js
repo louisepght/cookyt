@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from '../Styles';
+import { COLORS } from '../values/colors';
 
 export default function GroceryList (props) {
   const  navigation  = props.navigation;
@@ -18,9 +19,9 @@ export default function GroceryList (props) {
   }
 
     return (
-      <TouchableOpacity style={[styles.groceryListComponent, {backgroundColor:getMyColor(color)}]} 
+      <TouchableOpacity style={[localStyles.container, {backgroundColor:getMyColor(color)}]} 
       onPress={() => navigation.navigate('GroceryListDetails', {liste: liste})}>
-        <Text style={localStyles.text}>{liste.name}</Text>
+        <Text style={[{color:COLORS.white, justifyContent:'center'}, styles.h2]}>{liste.name}</Text>
         <View style={[styles.groceryListComponentBottom]}>
 
         </View>
@@ -34,6 +35,15 @@ const localStyles = StyleSheet.create({
       fontSize:15,
       fontWeight:'bold',
       color:'#fff'
+    },
+    container:{
+      justifyContent:'center',
+      height: 60, 
+      width:310,
+      paddingLeft:10,
+      borderRadius:20, 
+      marginLeft: 20, 
+      marginBottom:8, 
+      marginRight:20
     }
-
 })

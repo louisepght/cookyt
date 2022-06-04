@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Platform, KeyboardAvoidingView, TouchableOpacity, Image, Keyboard  } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Platform, KeyboardAvoidingView, TouchableOpacity, Image, Keyboard, SafeAreaView  } from 'react-native'
 import React, {useState, Component}  from 'react';
 import GroceryList from '../components/GroceryList';
 import styles from '../Styles'
@@ -13,7 +13,7 @@ import GroceryListModel from '../models/GroceryListModel'
 
 //import * as data from '../data/groceries.json';
 const data = require('../data/groceries.json');
-
+import {COLORS} from '../values/colors'
 
 
 class GroceryListScreen extends React.Component{
@@ -68,7 +68,7 @@ class GroceryListScreen extends React.Component{
 
   render(){
     return (
-      <View style={[styles.androidSafeArea, {paddingBottom:0}]}> 
+      <SafeAreaView style={[styles.androidSafeArea, {paddingBottom:0}]}> 
       <ScrollView contentContainerStyle ={[styles.GroceryListScreenContainer]}>
 
         <View style={styles.titleContainer}>
@@ -98,12 +98,12 @@ class GroceryListScreen extends React.Component{
         <View style={localStyles.container}>
         {/* Liste des listes de courses */}        
           {mySharedGroceries.map( (item, index) => {
-            return <GroceryList navigation={this.props.navigation} liste={item} color={this.getAColor(index)} key={index}/>
+            return <GroceryList navigation={this.props.navigation} liste={item} color={COLORS.kaki} key={index}/>
           })}
         </View>
 
       </ScrollView>
-    </View>
+    </SafeAreaView>
     )
 }
 }

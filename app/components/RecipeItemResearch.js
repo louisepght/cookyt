@@ -14,7 +14,7 @@ class RecipeItemResearch extends Component{
                                                 <Image source={{uri: this.props.imageUri}} style={{flex: 1, height:null,width:null, marginTop:5, marginLeft:12, marginRight:12, marginBottom:0, borderRadius:20}}></Image>
                                               </View>
                                               <View>
-                                                <Text adjustsFontSizeToFit style={{textAlign:'center', textAlignVertical:'center', marginTop:2, marginStart:10, marginEnd:10, marginBottom:5,color:this.props.fontcolor}}>{this.props.name}</Text>
+                                                <Text adjustsFontSizeToFit style={{textAlign:'center', textAlignVertical:'center', marginTop:2, marginStart:10, marginEnd:10, marginBottom:5, color:"#fff"}}>{this.props.name}</Text>
                                               </View>
                                         </View>
                                   </View>

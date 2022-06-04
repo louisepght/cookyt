@@ -74,9 +74,9 @@ function SearchScreen() {
               </Text>
             </View>
             <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20 }}>
-              {searchRecipes?.map((searchRecipe) => {
+              {searchRecipes?.map((searchRecipe, index) => {
                 return (
-                  <RecipeItemResearch imageUri={searchRecipe.image} name={searchRecipe.name} color='#fff' ></RecipeItemResearch>
+                  <RecipeItemResearch imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} key={index}></RecipeItemResearch>
                 )
               }
               )}

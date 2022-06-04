@@ -53,7 +53,9 @@ function RecipesListScreen({route,navigation}) {
                   //console.log(recipes[i]);
                   if(recipes[i].name == it.name){
                     
-                    return <RecipesList navigation={navigation} backgroundColor={COLORS.kaki}imageUri={recipes[i].image} text={recipes[i].name} recipe ={recipes[i].path} fontcolor={COLORS.white}  target={'RecipesListScreen'} path={recipes[i].path} ></RecipesList>
+                    return <RecipesList navigation={navigation} backgroundColor={COLORS.kaki} imageUri={recipes[i].image} 
+                    text={recipes[i].name} recipe ={recipes[i].path} fontcolor={COLORS.white}  target={'RecipesListScreen'} 
+                    path={recipes[i].path} key={index}></RecipesList>
                   }
                 }
 

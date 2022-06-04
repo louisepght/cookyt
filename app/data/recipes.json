@@ -16,18 +16,18 @@
 	},
     {
 		"name":"Semoule aux olives",
-		"path":"../data/recipes/semoule_olives.json",
+		"path":"semoule_olives",
 		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
 	},
     {
 		"name":"Semoule aux olives",
-		"path":"../data/recipes/semoule_olives.json",
+		"path":".semoule_olives",
 		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
 	}
 	,
     {
 		"name":"Pain perdu",
-		"path":"../data/recipes/semoule_olives.json",
+		"path":"pain_perdu",
 		"image":"https://img-3.journaldesfemmes.fr/yhWadjdE6C_QO6fcDNT-pV2pDGQ=/750x500/smart/1870f38ecc844d1daba490bac20f2990/recipe-jdf/10019491.jpg"
 	}
 ]

@@ -6,7 +6,7 @@ import { menuBarHeight } from '../values/constantes';
 import ReturnScreenButton from '../components/ReturnScreenButton'
 import SharedUser from '../components/SharedUser'
 import GroceryItem from '../components/GroceryItem';
-import ItemModel from '../models/itemModel';
+import ItemModel from '../models/ItemModel';
 import { COLORS } from '../values/colors';
 import { ScrollView } from 'react-native-gesture-handler'
  
@@ -71,8 +71,8 @@ class GroceryListDetails extends React.Component{
             {/*
               Section "partagée avec qui?"
             */}
-            <View style={localStyles.sharingContainer}>
-              <View style={localStyles.aboveSharingUser}>
+            <View style={[localStyles.sharingContainer, {paddingLeft:8}]}>
+              <View style={[localStyles.aboveSharingUser,{paddingLeft:5}]}>
                 <Text style={localStyles.shareText}>
                   Partagé avec
                 </Text>

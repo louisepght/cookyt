@@ -20,6 +20,9 @@ import GroceryListDetails from './app/screens/GroceryListDetails';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
 import styles from './app/Styles'
 
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Setting a timer']);
+
 //Scree names
 const homeScreen = 'Home';
 const searchScreen = 'Search';
@@ -51,7 +54,7 @@ export default function App() {
 
         }
       }}>
-      <Tab.Screen name="Home" component={HomeScreenNavigator} options={{
+      <Tab.Screen name="HomeScreen" component={HomeScreenNavigator} options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/home.png')}

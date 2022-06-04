@@ -13,3 +13,4 @@ package.json
 
 # macOS
 .DS_Store
+app/screens/Home.js

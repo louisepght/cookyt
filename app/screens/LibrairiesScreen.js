@@ -67,20 +67,9 @@ class LibrairiesScreen extends Component{
                 Vos Bibliothèques
               </Text>
             </View>
-
-
             <View style={{flex:1}}>
-
-
-              <SearchBar></SearchBar>
-              
-
-            
+              <SearchBar></SearchBar>      
             </View>
-
-
-           
-
             <View style={localstyles.container}>
               
               {/* Liste des listes de courses    
