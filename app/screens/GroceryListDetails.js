@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, KeyboardAvoidingView, Keyboard, Platform, TextInput, TouchableOpacity, Image  } from 'react-native'
+import { StyleSheet, Text, View, KeyboardAvoidingView, Keyboard, Platform, TextInput, TouchableOpacity, Image, Alert  } from 'react-native'
 import PropTypes from 'prop-types'
 import styles from '../Styles'
 import { menuBarHeight } from '../values/constantes';
@@ -7,7 +7,7 @@ import ReturnScreenButton from '../components/ReturnScreenButton'
 import SharedUser from '../components/SharedUser'
 import GroceryItem from '../components/GroceryItem';
 import ItemModel from '../models/ItemModel';
-
+import { COLORS } from '../values/colors';
 import { ScrollView } from 'react-native-gesture-handler'
  
 
@@ -29,9 +29,9 @@ class GroceryListDetails extends React.Component{
   componentDidMount() {
     //après avoir monté le composant, on charge les listes depuis le fichier JSON et on les ajoute au tableau glistItems
     this.setState({ text:'' }); //ça sert juste à appeler render une fois qu'on a ajouté les listes de courses au tableau
-    console.log(this.liste);
-    console.log("TAILLE:");
-    console.log(menuBarHeight);
+    //console.log(this.liste);
+    //console.log("TAILLE:");
+    //console.log(menuBarHeight);
   }
 
   handleAddPlist = () => { //Pour l'ajout d'un produit dans la liste des produits
@@ -44,9 +44,17 @@ class GroceryListDetails extends React.Component{
     }
   }
   
-  //let contribs = parsedData.contributors;
+  addUser = () => {
+    Alert.alert(
+      "Attention",
+      "Cette fonction n'a pas encore été implémentée",
+      [
 
-//  console.log(liste);
+        { text: "OK", onPress: () => console.log("OK Pressed") }
+      ]
+    );
+  }
+
   render(){
     return (
       <View style={ [styles.androidSafeArea]}>
@@ -64,26 +72,22 @@ class GroceryListDetails extends React.Component{
               Section "partagée avec qui?"
             */}
             <View style={localStyles.sharingContainer}>
-              <Text style={localStyles.shareText}>
-                Partagé avec
-              </Text>
+              <View style={localStyles.aboveSharingUser}>
+                <Text style={localStyles.shareText}>
+                  Partagé avec
+                </Text>
+                
+              </View>
               <View style={localStyles.sharingcontainer}>
-                
-                <SharedUser navigation={this.props.navigation} name="Cécile" />
-                <SharedUser navigation={this.props.navigation} name="Alphonse DelarocheBatt" />
-                <SharedUser navigation={this.props.navigation} name="Alphonse Delaroche" />
-                <SharedUser navigation={this.props.navigation} name="Alphonse Delarocheau" />
-                
-                {/* Si on veut utiliser un fichier json par liste}
-                {contribs.map( (it, index) => {
-                  return <SharedUser navigation={navigation} name={it} key={index}/>
-                })}
-                */}
-                
+
                 {this.liste.contributors.map( (it, index) => {
                   return <SharedUser navigation={this.props.navigation} name={it} key={index}/>
                 })}
-
+                <TouchableOpacity style={localStyles.addUser} onPress={()=> this.addUser()}>
+                <Image source={require('../assets/user-add.png')}
+                  resizeMode='contain'
+                  style={[styles.imageButonAdd]}/>
+                </TouchableOpacity>
               </View>
             </View> 
 
@@ -140,6 +144,12 @@ const localStyles = StyleSheet.create({
   titleText:{
     fontSize:22,
   },
+  aboveSharingUser: {
+    flexDirection:"row",
+    alignContent:"center",
+    marginRight:"0%"
+    
+  },
   shareText:{
     fontSize:18,
   },
@@ -149,6 +159,15 @@ const localStyles = StyleSheet.create({
     flex:1,
     flexWrap:'wrap',
     alignItems:'center',
+  },
+  addUser:{      
+    backgroundColor: COLORS.neonGreen,
+    borderRadius:18,
+    width:36,
+    height:36,
+    marginHorizontal:2,
+    justifyContent:'center',
+    alignItems:'center'
   },
   itemsContainer:{
     alignItems:'flex-start',
