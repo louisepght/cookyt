@@ -6,7 +6,7 @@ import { menuBarHeight } from '../values/constantes';
 import ReturnScreenButton from '../components/ReturnScreenButton'
 import SharedUser from '../components/SharedUser'
 import GroceryItem from '../components/GroceryItem';
-import ItemModel from '../models/ItemModel';
+import ItemModel from '../models/itemModel';
 import { COLORS } from '../values/colors';
 import { ScrollView } from 'react-native-gesture-handler'
  

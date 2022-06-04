@@ -126,6 +126,7 @@ const localstyles = StyleSheet.create({
       //flex: 1,
       alignItems:"center",
       paddingBottom:75,
+      marginTop: 10,
     }
   });
 

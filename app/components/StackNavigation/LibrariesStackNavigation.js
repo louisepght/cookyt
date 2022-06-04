@@ -7,6 +7,7 @@ import React from 'react';
 
 import LibrairiesScreen from '../../screens/LibrairiesScreen';
 import RecipesListScreen from '../../screens/RecipesListScreen';
+import RecipeScreen from '../../screens/RecipeScreen';
 
 
 
@@ -31,6 +32,10 @@ export default function LibrariesStackNavigation() {
         <Stack.Screen 
         name="RecipesListScreen"
         component={RecipesListScreen}
+        />
+        <Stack.Screen 
+        name="RecipeScreen"
+        component={RecipeScreen}
         />
     </Stack.Navigator>
   )

@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Button, Dimensions } from 're
 import React from 'react'
 import { ScrollView } from 'react-native-gesture-handler'
 import { COLORS } from "../values/colors";
-import ItemModel from '../models/ItemModel';
+import ItemModel from '../models/itemModel';
 const { height, width } = Dimensions.get('window')
 
 

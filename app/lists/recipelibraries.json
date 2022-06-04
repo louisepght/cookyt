@@ -3,43 +3,62 @@
         "name": "Mes recettes préférées",
         "contributors":["Céline", "Michel"],
 		"recipes":[
-			{"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"},
-            {"name":"Quiche au thon"},
-			{"name":"Lasagnes"},
-			{"name":"Salade de riz"}
+			{"name":"Spaghettis aux crevettes"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"}
+           
 		]
     },
     {
-        "name": "Recettes faciles"
+        "name": "Recettes faciles",
+        "contributors":["Céline", "Michel"],
+		"recipes":[
+			{"name":"Spaghettis aux crevettes"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"}
+           
+		]
     },
     {
-        "name": "Dîner"
+        "name": "Dîner",
+        "contributors":["Céline", "Michel"],
+		"recipes":[
+			{"name":"Spaghettis aux crevettes"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"}
+           
+		]
     },
     {
-        "name": "Pâtisserie"
+        "name": "Pâtisserie",
+        "contributors":["Céline", "Michel"],
+		"recipes":[
+			{"name":"Spaghettis aux crevettes"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"}
+           
+		]
     },
     {
-        "name": "Brunch"
+        "name": "Brunch",
+        "contributors":["Céline", "Michel"],
+		"recipes":[
+			{"name":"Pain perdu"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"},
+            {"name":"Tiramisu aux framboises"}
+           
+		]
     },
     {
-        "name": "Epater la galerie"
+        "name": "Epater la galerie",
+        "contributors":["Céline", "Michel"],
+		"recipes":[
+			{"name":"Spaghettis aux crevettes"},
+			{"name":"Semoule aux olives"},
+			{"name":"Tiramisu aux framboises"}
+           
+		]
     }
    
 ]
