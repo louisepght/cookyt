@@ -14,20 +14,49 @@
 		"path":"tiramisu_framboises",
 		"image":"https://tonmag.net/wp-content/uploads/2021/12/Tiramisu-aux-framboises-doux-et-rafraichissant.jpg"
 	},
+	{
+		"name":"Eclair au chocolat",
+		"path":"eclair_chocolat",
+		"image":"https://img.cuisineaz.com/660x660/2018/09/04/i142312-eclairs-au-chocolat-au-compact-cook.jpeg"
+	},
+    {
+		"name":"Gâteau au yaourt",
+		"path":"gateau_yaourt",
+		"image":"https://www.mapatisserie.net/wp-content/uploads/2020/05/gateau-au-yaourt-super-juteux.jpg"
+	},
+	{
+		"name":"Omelette au fromage",
+		"path":"omelette_fromage",
+		"image":"https://www.duracuire.com/wp-content/uploads/Omelette-au-fromage-1140x641.jpg"
+	},
+	{
+		"name":"Pancakes à la banane",
+		"path":"pancake_banane",
+		"image":"https://recette.supertoinette.com/151531/b/pancakes-a-la-banane.jpg"
+	},	
+	{
+		"name":"Pâtes à la carbonara (italiennes)",
+		"path":"pates_carbonara",
+		"image":"https://www.adeline-cuisine.fr/wp-content/uploads/2017/05/pates-a-la-carbonara-recette-italienne.jpg"
+	},
+	{
+		"name":"Riz dinde sauce champignon",
+		"path":"riz_dinde",
+		"image":"https://img.cuisine-etudiant.fr/image/recette/800500/70d93f03ebbcc9ec65e08dddb31782fd578ab765-escalope-de-dinde-a-la-creme.jpg"
+	},
+	{
+		"name":"Hamburger au saumon",
+		"path":"burger_saumon",
+		"image":"https://www.club-sandwich.net/images/photorecettes/burger-norvegien-123rf.jpg"
+	},
+	{
+		"name":"Bouillie qui nourrit",
+		"path":"bouillie",
+		"image":"https://media.lelombrik.net/t/2beb435efd49e029b4bc3c5b055b04fb/p/03.jpg"
+	},
     {
 		"name":"Semoule aux olives",
 		"path":"semoule_olives",
 		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
-	},
-    {
-		"name":"Semoule aux olives",
-		"path":".semoule_olives",
-		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
-	}
-	,
-    {
-		"name":"Pain perdu",
-		"path":"pain_perdu",
-		"image":"https://img-3.journaldesfemmes.fr/yhWadjdE6C_QO6fcDNT-pV2pDGQ=/750x500/smart/1870f38ecc844d1daba490bac20f2990/recipe-jdf/10019491.jpg"
 	}
 ]

@@ -1,0 +1,23 @@
+{
+    "name":"Riz à la dinde sauce champignon",
+    "image":"https://img.cuisine-etudiant.fr/image/recette/800500/70d93f03ebbcc9ec65e08dddb31782fd578ab765-escalope-de-dinde-a-la-creme.jpg",
+    "rating":4.2,
+	"nbPersons":6,
+    "ingredients":[
+		{"name":"Riz thaï", "quantity":700, "quantityType":"g"},
+        {"name":"Escalope de dinde", "quantity":500, "quantityType":"g"},
+        {"name":"Oignons", "quantity":2},
+		{"name":"Crème liquide entière (30%mg)", "quantity":1, "quantityType":"brique"},
+		{"name":"Huile de cuisson", "quantity":6, "quantityType":"c.à.s"},
+		{"name":"Beurre", "quantity":50, "quantityType":"g"},
+		{"name":"Ail", "quantity":4, "quantityType":"gousses"},
+		{"name":"Curry", "quantity":2, "quantityType":"c.à.c"},
+		{"name":"Sel"},
+		{"name":"Poivre"}
+    ],
+	"steps":[
+		"Pour le riz : prendre un grand récipient avec son couvercle. Sur feu doux , y mettre 3 cuillères à soupe d'huile qu'on laisse chauffer ; y jeter les 700 gr de riz parfumé(basmati) et remuer lentement jusqu'à ce que le riz deviennent translucide. A ce moment rajouter de l'eau à peu prés 3 cm au dessus du riz, saler et attendre l'ébullition ; ramener le feu au plus bas et surtout recouvrir immédiatement ; le riz gonflera et absorbera toute l'eau. ",
+		"Pour la sauce : Dans une poêle un peu profonde, couper les 2 gros oignons le plus fin possible, laisser fondre 15 minutes à feu fort au début (~5 mn) et doux les 10 minutes restantes. A coté, couper en petits dé de 1 cm environ les 500 gr d'escalopes de dindes et les jeter dans la poêle, saler et poivrer à volonté, cuire les dés énergiquement de façon à ce que cela soit doré. A la fin de la cuisson ajouter l'ail que l'on aura rapé et le curry, remuer énergiquement 2 ou 3 fois de façon à ce que l'ail ne brûle surtout pas. rajouter à ce moment le crème, saler si nécessaire.",
+		"Pour la présentation : Dans une assiette plate disposer le riz, ajouter une noisette de beurre pour le rendre agréable. Au milieu de l'assiette creuser une sorte de puits au milieu du quelle y mette 3 cuillères à soupe de sauce à la dinde au curry et dégustez !"
+	]
+}

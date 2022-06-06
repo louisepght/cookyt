@@ -1,0 +1,21 @@
+{
+    "name":"Gâteau au yaourt",
+    "image":"https://www.mapatisserie.net/wp-content/uploads/2020/05/gateau-au-yaourt-super-juteux.jpg",
+    "rating":4.6,
+	"nbPersons":6,
+    "ingredients":[
+		{"name":"Yaourt nature", "quantity":1, "quantityType":"pot"},
+		{"name":"Farine", "quantity":3, "quantityType":"pots"},
+		{"name":"Sucre", "quantity":2, "quantityType":"pots"},
+		{"name":"Sucre vanillé", "quantity":1, "quantityType":"sachet"},
+		{"name":"Oeufs", "quantity":3},
+		{"name":"Huile d'olive", "quantity":0.5, "quantityType":"pot"},
+		{"name":"Levure chimique", "quantity":0.5, "quantityType":"sachet"},
+		{"name":"Sel", "quantity":1, "quantityType":"pincée"}
+    ],
+	"steps":[
+		"Allumer le four thermostat 5-6 (180°C). Beurrer un moule rond.",
+		"Verser le yaourt dans un saladier et ajouter dans l'ordre en mélangeant bien avec une cuillère en bois : les sucres, les œufs un à un, la farine, la levure, le sel, l'huile.",
+		"Mettre la préparation dans le moule beurré et faire cuire 35 minutes. Laisser refroidir et démouler."
+	]
+}

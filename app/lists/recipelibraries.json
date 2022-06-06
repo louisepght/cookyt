@@ -4,19 +4,17 @@
         "contributors":["Céline", "Michel"],
 		"recipes":[
 			{"name":"Spaghettis aux crevettes"},
-			{"name":"Semoule aux olives"},
-			{"name":"Tiramisu aux framboises"}
-           
+			{"name":"Hamburger au saumon"},
+			{"name":"Gâteau au yaourt"}
 		]
     },
     {
         "name": "Recettes faciles",
         "contributors":["Céline", "Michel"],
 		"recipes":[
-			{"name":"Spaghettis aux crevettes"},
-			{"name":"Semoule aux olives"},
-			{"name":"Tiramisu aux framboises"}
-           
+			{"name":"Riz à la dinde sauce champignon"},
+			{"name":"Pâtes à la carbonara (italiennes)"},
+			{"name":"Omelette au fromage"}
 		]
     },
     {
@@ -25,39 +23,36 @@
 		"recipes":[
 			{"name":"Spaghettis aux crevettes"},
 			{"name":"Semoule aux olives"},
-			{"name":"Tiramisu aux framboises"}
-           
+			{"name":"Riz à la dinde sauce champignon"},
+			{"name":"Pâtes à la carbonara (italiennes)"}
 		]
     },
     {
         "name": "Pâtisserie",
         "contributors":["Céline", "Michel"],
 		"recipes":[
-			{"name":"Spaghettis aux crevettes"},
-			{"name":"Semoule aux olives"},
+			{"name":"Gâteau au yaourt"},
+			{"name":"Eclair au chocolat"},
+			{"name":"Pancakes à la banane"},
 			{"name":"Tiramisu aux framboises"}
-           
 		]
     },
     {
         "name": "Brunch",
         "contributors":["Céline", "Michel"],
 		"recipes":[
-			{"name":"Pain perdu"},
-			{"name":"Semoule aux olives"},
-			{"name":"Tiramisu aux framboises"},
-            {"name":"Tiramisu aux framboises"}
-           
+			{"name":"Pancakes à la banane"},
+			{"name":"Omelette au fromage"}
 		]
     },
     {
         "name": "Epater la galerie",
         "contributors":["Céline", "Michel"],
 		"recipes":[
-			{"name":"Spaghettis aux crevettes"},
-			{"name":"Semoule aux olives"},
+			{"name":"Hamburger au saumon"},
+			{"name":"Eclair au chocolat"},
+			{"name":"Bouillie qui nourrit"},
 			{"name":"Tiramisu aux framboises"}
-           
 		]
     }
    

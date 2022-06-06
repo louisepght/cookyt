@@ -1,0 +1,19 @@
+{
+    "name":"Omelette au fromage",
+    "image":"https://www.duracuire.com/wp-content/uploads/Omelette-au-fromage-1140x641.jpg",
+    "rating":5,
+	"nbPersons":4,
+    "ingredients":[
+		{"name":"Oeufs", "quantity":7},
+		{"name":"Gruyère râpé", "quantity":200, "quantityType":"g"},
+		{"name":"Crème fraîche épaisse", "quantity":1, "quantityType":"c.à.s"},
+		{"name":"Ciboulette", "quantity":2, "quantityType":"c.à.s"},
+		{"name":"Beurre", "quantity":30, "quantityType":"g"},
+		{"name":"Noix de muscade râpée", "quantity":1, "quantityType":"pincée"}
+    ],
+	"steps":[
+		"Cassez les oeufs dans une terrine puis fouettez-les avec la crème, la ciboulette, la noix de muscade. Salez et poivrez à votre convenance.",
+		"Faites chauffer le beurre dans une grande poêle et versez le mélange. Faites cuire à feu très vif, puis baissez le feu, ajoutez le fromage râpé et laissez cuire encore quelques minutes.",
+		"Pliez ensuite votre omelette à l'aide d'une spatule et faites-la dorer sur les deux faces. Servez bien chaud avec une salade verte bien assaisonnée."
+	]
+}

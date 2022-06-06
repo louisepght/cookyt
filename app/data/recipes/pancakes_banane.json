@@ -1,0 +1,26 @@
+{
+    "name":"Pancakes à la banane",
+    "image":"https://recette.supertoinette.com/151531/b/pancakes-a-la-banane.jpg",
+    "rating":4.4,
+	"nbPersons":4,
+    "ingredients":[
+		{"name":"Bananes bien mûres", "quantity":2},
+		{"name":"Oeufs", "quantity":2},
+		{"name":"Farine", "quantity":200, "quantityType":"g"},
+		{"name":"Sucre", "quantity":70, "quantityType":"g"},
+		{"name":"Levure chimique", "quantity":1, "quantityType":"c.à.s"},
+		{"name":"Lait", "quantity":10, "quantityType":"cl"},
+		{"name":"Sel", "quantity":1, "quantityType":"pincée"}
+    ],
+	"steps":[
+		"Dans un saladier, écrasez finement les bananes.",
+		"Ajoutez les œufs battus, le sucre, le sel et la levure. Mélangez bien l'ensemble.",
+		"Ajoutez le farine et mélangez de nouveau.",
+        "Versez le lait tout en continuant de mélanger. La pâte doit être assez épaisse.",
+        "Laissez reposer 10 minutes à température ambiante.",
+        "Dans une poêle, légèrement huilée, versez des petits ronds de pâte en les espaçant les uns des autres.",
+        "Laissez colorer pendant environ 1 minute et retournez-les pour les faire cuire sur l'autre face.",
+        "Procédez de la même façon pour la pâte restante.",
+        "Dégustez les pancakes tièdes ou froids, natures ou avec du sirop d'érable, du miel ou du chocolat fondu."
+	]
+}

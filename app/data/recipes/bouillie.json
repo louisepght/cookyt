@@ -1,0 +1,21 @@
+{
+    "name":"Bouillie qui nourrit",
+    "image":"https://media.lelombrik.net/t/2beb435efd49e029b4bc3c5b055b04fb/p/03.jpg",
+    "rating":5,
+	"nbPersons":1,
+    "ingredients":[
+		{"name":"Farine", "quantity":250, "quantityType":"g"},
+		{"name":"Soupe déshydratée à l'oignon", "quantity":1, "quantityType":"sachet"},
+		{"name":"Pâtée de boeuf pour chien ", "quantity":1, "quantityType":"boîte"},
+		{"name":"Concentré de tomates", "quantity":1, "quantityType":"boîte"},
+		{"name":"Eau", "quantity":1, "quantityType":"l"},
+		{"name":"(Pâtes, si riche)", "quantity":200, "quantityType":"g"}
+    ],
+	"steps":[
+		"Mélanger tous les ingrédients dans une cocotte.",
+		"Faire cuire à feu doux pendant une demi-heure environ, jusqu'à obtenir une bouille homogène.",
+		"Pour les jours de fête, ajouter des pâtes.",
+        "Profitez ! Vous en avez assez pour 3 jours. Bon appétit !",
+        "Merci au khey DivinGoret pour cette recette ! <3"
+	]
+}

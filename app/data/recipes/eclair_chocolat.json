@@ -1,0 +1,33 @@
+{
+    "name":"Eclair au chocolat",
+    "image":"https://img.cuisineaz.com/660x660/2018/09/04/i142312-eclairs-au-chocolat-au-compact-cook.jpeg",
+    "rating":3.8,
+	"nbPersons":6,
+    "ingredients":[
+		{"name":"Farine", "quantity":150, "quantityType":"g"},
+		{"name":"Beurre", "quantity":75, "quantityType":"g"},
+		{"name":"Oeufs", "quantity":4},
+		{"name":"Jaune d'oeuf", "quantity":1},
+		{"name":"Eau", "quantity":25, "quantityType":"cl"},
+		{"name":"Huile"},
+		{"name":"Sucre", "quantity":15, "quantityType":"g"},
+		{"name":"Sel", "quantity":1, "quantityType":"pincée"}
+    ],
+	"steps":[
+		"Pour la pâte : préchauffer le four à 210°C (Thermostat 7).",
+		"Mélanger sel, sucre, beurre et eau dans une casserole, et faire bouillir.",
+		"Intégrer la farine, et remuer jusqu'à l'obtention d'une pâte compacte. La travailler jusqu'à ce qu'elle soit suffisamment ferme.",
+		"Intégrer 4 oeufs, un à un en veillant à bien mélanger entre chaque oeuf. ",
+		"Travailler la pâte afin de la rendre ferme.",
+		"Sur un plaque allant au four préalablement huilée, répartir à l'aide de la poche à douille une dizaine de boudins de pâte de 15 cm de long environ.",
+		"Badigeonner avec le jaune d'œuf pour que la pâte soit dorée à la cuisson .",
+		"Faire cuire 25 min à four chaud et laisser reposer 10 min, four éteint, pour éviter que les choux ou les éclairs ne dégonflent.",
+		"Pour la crème : faire fondre 60 g de chocolat cassé en morceaux dans le lait, à feu doux.",
+		"Dans un bol, fouetter oeuf, jaune et sucre jusqu'à ce que le mélange soit mousseux.",
+		"Ajouter la farine et verser dans le lait chocolaté.",
+		"Faire épaissir sans cesser de remuer.",
+		"Hors du feu, intégrer 20 g de beurre. Laisser refroidir.",
+		"Garnir de cette crème les éclairs coupés en 2 dans le sens de la longueur et faire fondre au bain-marie le reste du chocolat et du beurre.",
+		"Napper le dessus des éclairs. Laisser durcir le glaçage avant de déguster."
+	]
+}
