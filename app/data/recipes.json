@@ -7,7 +7,7 @@
 	{
 		"name":"Semoule aux olives",
 		"path":"semoule_olives",
-		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
+		"image":"https://img-3.journaldesfemmes.fr/-xYHidUEeEbrOCutdigx6AultJM=/750x500/smart/71c49e213e8f4dd0b6d23052bda17cb8/recipe-jdf/10040803.jpg"
 	},
     {
 		"name":"Tiramisu aux framboises",
@@ -53,10 +53,5 @@
 		"name":"Bouillie qui nourrit",
 		"path":"bouillie",
 		"image":"https://media.lelombrik.net/t/2beb435efd49e029b4bc3c5b055b04fb/p/03.jpg"
-	},
-    {
-		"name":"Semoule aux olives",
-		"path":"semoule_olives",
-		"image":"https://recettes.de/images/blogs/nana-et-chocolat/semoule-a-la-tomate-olives-et-epinards-400.640x480.jpg"
 	}
 ]

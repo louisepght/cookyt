@@ -9,7 +9,7 @@ import RecipeItemList from '../components/RecipeItemList';
 import RecipeItemResearch from '../components/RecipeItemResearch';
 import { render } from 'react-dom';
 
-function SearchScreen() {
+function SearchScreen({navigation}) {
 
   const [searchRecipes, setSearchRecipes] = useState();
   const [searchPhrase, setSearchPhrase] = useState("");
@@ -74,21 +74,11 @@ function SearchScreen() {
                   Top recherches
                 </Text>
               </View>
-  {/*
-              <ScrollView horizontal={true}
-                    showsHorizontalScrollIndicator={false}
-                    scrollEventThrottle={16}
-                    style = {{marginLeft:10, marginEnd:10}}>
-                  {this.state.recommendations.map( (item, index) => {
-                  return <Category navigation={this.props.navigation} imageUri={item.image} name={item.name} color='#32582B' fontcolor='#fff' recipe={item.path} key={index}></Category>
-                  })}
-                </ScrollView> */}
-
 
               <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20 }}>
                 {searchRecipes?.map((searchRecipe, index) => {
                   return (
-                    <RecipeItemResearch navigation={searchRecipe.navigation} imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} recipe={searchRecipe.path} key={index}></RecipeItemResearch>
+                    <RecipeItemResearch navigation={navigation} imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} recipe={searchRecipe.path} key={index}></RecipeItemResearch>
                   )
                 }
                 )}

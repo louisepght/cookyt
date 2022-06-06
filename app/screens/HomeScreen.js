@@ -100,7 +100,7 @@ class HomeScreen extends React.Component{
             <View>
               <View style={styles.titleContainer}>
                 <Text style = {styles.titleText}>
-                Astuces du jour
+                Astuce du jour
                 </Text>
               </View>
               <AstuceduJour backgroundColor={COLORS.white} fontcolor={COLORS.black} text="Philippe Etchebest : C'est qui le patron?" imageUri={require('../assets/etchebest.jpg')}></AstuceduJour>
