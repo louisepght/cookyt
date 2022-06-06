@@ -14,7 +14,7 @@ import HomeScreen from './app/screens/HomeScreen';
 import SearchScreen from './app/screens/SearchScreen';
 import LibrairiesScreen from './app/screens/LibrairiesScreen';
 import GroceryListScreen from './app/screens/GroceryListScreen';
-import {HomeScreenNavigator, GroceryListScreenNavigator} from './app/components/StackNavigation/CustomStackNavigation';
+import {HomeScreenNavigator, SearchScreenNavigator, GroceryListScreenNavigator} from './app/components/StackNavigation/CustomStackNavigation';
 import LibrariesStackNavigation from './app/components/StackNavigation/LibrariesStackNavigation';
 import GroceryListDetails from './app/screens/GroceryListDetails';
 import { withSafeAreaInsets } from 'react-native-safe-area-context';
@@ -63,7 +63,7 @@ export default function App() {
           </View>
         )
       }}/>
-      <Tab.Screen name="Search" component={SearchScreen}  options={{
+      <Tab.Screen name="SearchScreen" component={SearchScreenNavigator}  options={{
         tabBarIcon: ({focused}) => (
           <View style= { [styles.iconContainer, {backgroundColor: focused? '#fff' : '#4cd736'}]}>
             <Image source={require('./app/assets/search.png')}

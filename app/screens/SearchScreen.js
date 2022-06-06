@@ -7,8 +7,10 @@ import { COLORS } from '../values/colors';
 import SearchBar from '../components/SearchBar';
 import RecipeItemList from '../components/RecipeItemList';
 import RecipeItemResearch from '../components/RecipeItemResearch';
+import { render } from 'react-dom';
 
 function SearchScreen() {
+
   const [searchRecipes, setSearchRecipes] = useState();
   const [searchPhrase, setSearchPhrase] = useState("");
 
@@ -50,43 +52,52 @@ function SearchScreen() {
 
 
 
-
-  return (
-    <SafeAreaView style={styles.androidSafeArea}>
-      <View style={{ flexDirection: 'column' }}>
-        <ScrollView
-          scrollEventThrottle={16}
-        >
-          <View style={styles.titleContainer}>
-            <Text style={styles.titleText}>
-              Rechercher
-            </Text>
-          </View>
-
-          <View style={{ flex: 1 }}>
-            <SearchBar searchPhrase={searchPhrase} setSearchPhrase={setSearchPhrase}></SearchBar>
-          </View>
-
-          <View style={{ flex: 1 }}>
+      return (
+      <SafeAreaView style={styles.androidSafeArea}>
+        <View style={{ flexDirection: 'column' }}>
+          <ScrollView
+            scrollEventThrottle={16}
+          >
             <View style={styles.titleContainer}>
-              <Text style={styles.subtitleText}>
-                Top recherches
+              <Text style={styles.titleText}>
+                Rechercher
               </Text>
             </View>
-            <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20 }}>
-              {searchRecipes?.map((searchRecipe, index) => {
-                return (
-                  <RecipeItemResearch imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} key={index}></RecipeItemResearch>
-                )
-              }
-              )}
+
+            <View style={{ flex: 1 }}>
+              <SearchBar searchPhrase={searchPhrase} setSearchPhrase={setSearchPhrase}></SearchBar>
             </View>
-          </View>
 
-        </ScrollView>
-      </View>
-    </SafeAreaView>
+            <View style={{ flex: 1 }}>
+              <View style={styles.titleContainer}>
+                <Text style={styles.subtitleText}>
+                  Top recherches
+                </Text>
+              </View>
+  {/*
+              <ScrollView horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    scrollEventThrottle={16}
+                    style = {{marginLeft:10, marginEnd:10}}>
+                  {this.state.recommendations.map( (item, index) => {
+                  return <Category navigation={this.props.navigation} imageUri={item.image} name={item.name} color='#32582B' fontcolor='#fff' recipe={item.path} key={index}></Category>
+                  })}
+                </ScrollView> */}
 
+
+              <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20 }}>
+                {searchRecipes?.map((searchRecipe, index) => {
+                  return (
+                    <RecipeItemResearch navigation={searchRecipe.navigation} imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} recipe={searchRecipe.path} key={index}></RecipeItemResearch>
+                  )
+                }
+                )}
+              </View>
+            </View>
+
+          </ScrollView>
+        </View>
+      </SafeAreaView>
   )
 }
 

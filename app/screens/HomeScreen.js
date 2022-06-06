@@ -32,6 +32,7 @@ class HomeScreen extends React.Component{
   }
 
   render(){
+    console.log("this.state.recommendations:");
     console.log(this.state.recommendations);
     return(
       <SafeAreaView  style={styles.androidSafeArea}>
@@ -102,7 +103,7 @@ class HomeScreen extends React.Component{
                 Astuces du jour
                 </Text>
               </View>
-              <AstuceduJour backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Comment faire un roux digne de ce nom ?' imageUri={require('../assets/etchebest.jpg')}></AstuceduJour>
+              <AstuceduJour backgroundColor={COLORS.white} fontcolor={COLORS.black} text="Philippe Etchebest : C'est qui le patron?" imageUri={require('../assets/etchebest.jpg')}></AstuceduJour>
 
             </View>
             <View style={{height:100}}></View>
