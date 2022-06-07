@@ -53,7 +53,7 @@ function SearchScreen({navigation}) {
 
 
       return (
-      <SafeAreaView style={styles.androidSafeArea}>
+      <SafeAreaView style={[styles.androidSafeArea, {paddingBottom:0}]}>
         <View style={{ flexDirection: 'column' }}>
           <ScrollView
             scrollEventThrottle={16}
@@ -75,7 +75,7 @@ function SearchScreen({navigation}) {
                 </Text>
               </View>
 
-              <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20 }}>
+              <View style={{ flexDirection: 'column', marginStart: 20, marginEnd: 20, paddingBottom:75 }}>
                 {searchRecipes?.map((searchRecipe, index) => {
                   return (
                     <RecipeItemResearch navigation={navigation} imageUri={searchRecipe.image} name={searchRecipe.name} color={COLORS.kaki} recipe={searchRecipe.path} key={index}></RecipeItemResearch>
