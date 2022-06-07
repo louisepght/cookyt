@@ -22,7 +22,7 @@ class HomeScreen extends React.Component{
     const data = require("../data/recipes.json");
     //console.log(data);
     let myList=[];
-    for(var i=0; i<Math.max(data.length,5); i++){
+    for(var i=0; i<Math.min(data.length,5); i++){
       var obj = data[i];
       if(obj.hasOwnProperty('name') && obj.name.length>0){
         myList.push(obj);
@@ -52,14 +52,12 @@ class HomeScreen extends React.Component{
                 <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Mes recettes préférées' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Dîner' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Brunch' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Recette pour la semaine' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 
               </View>
               <View style={{flexDirection:'column'}}>
                 <RecipeItemList backgroundColor={COLORS.black} fontcolor={COLORS.white} text='Recettes faciles' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.grey} fontcolor={COLORS.black} text='Pâtisserie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
                 <RecipeItemList backgroundColor={COLORS.kaki} fontcolor={COLORS.white} text='Epater la galerie' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
-                <RecipeItemList backgroundColor={COLORS.white} fontcolor={COLORS.black} text='Coloc' imageUri={require('../assets/crevettes.jpg')}></RecipeItemList>
               </View>
               </View>
             </View>

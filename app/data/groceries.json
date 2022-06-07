@@ -1,29 +1,28 @@
 [
 	{
-		"name":"MaListe",
+		"name":"Liste pour le week-end",
 		"contributors":["Céline", "Michel"],
 		"items":[
 			{"name":"Farine", "quantityIntial":500, "quantityLeft":500, "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
-			{"name":"Beurre", "quantityIntial":200, "quantityLeft":200, "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
-			{"name":"Jambon", "quantityIntial":2, "quantityLeft":2, "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
+			{"name":"Sucre", "quantityIntial":500, "quantityLeft":500, "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Lait", "quantityIntial":1, "quantityLeft":1, "quantityType":"l", "bought":true, "boughtBy":"", "boughtDate":""}
 		]
 	},
 	{
-		"name":"MaListe2",
+		"name":"Pique-nique camping",
 		"contributors":["Marcel", "Michel Fouligaud", "Florent Picard"],
 		"items":[
-			{"name":"Farine", "quantityIntial":"500", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
+			{"name":"Pain", "quantityIntial":"2", "quantityLeft":"2", "quantityType":"baguettes", "bought":true, "boughtBy":"", "boughtDate":""},
 			{"name":"Beurre", "quantityIntial":"200", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
 			{"name":"Jambon", "quantityIntial":"2", "quantityLeft":"500", "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
 		]
 	},
 	{
-		"name":"MaListe3",
+		"name":"Collocs",
 		"contributors":["Marion", "Jordan"],
 		"items":[
-			{"name":"Farine", "quantityIntial":"500", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
-			{"name":"Beurre", "quantityIntial":"200", "quantityLeft":"500", "quantityType":"grammes", "bought":false, "boughtBy":"", "boughtDate":""},
-			{"name":"Jambon", "quantityIntial":"2", "quantityLeft":"500", "quantityType":"tranches", "bought":false, "boughtBy":"", "boughtDate":""}
+			{"name":"Bières", "quantityIntial":"40", "quantityLeft":"40", "quantityType":"bouteilles", "bought":true, "boughtBy":"", "boughtDate":""},
+			{"name":"+ de bière", "quantityIntial":"20", "quantityLeft":"20", "quantityType":"packs", "bought":true, "boughtBy":"", "boughtDate":""}
 		]
 	}
 ]
